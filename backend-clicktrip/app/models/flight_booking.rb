@@ -1,0 +1,2 @@
+class FlightBooking < ApplicationRecord
+end

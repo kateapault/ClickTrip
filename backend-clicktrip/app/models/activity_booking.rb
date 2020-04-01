@@ -1,0 +1,2 @@
+class ActivityBooking < ApplicationRecord
+end
