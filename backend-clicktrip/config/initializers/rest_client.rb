@@ -73,7 +73,6 @@ end
 apitude_hotels_url = ''
 
 
-
 # Amadeus API Endpoint - hotels
 amadeus_url = ''
 
