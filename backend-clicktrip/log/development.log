@@ -50,3 +50,77 @@ Migrating to CreateActivityBookings (20200401215625)
   [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3416550378801452235)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/flights" for ::1 at 2020-04-02 12:24:37 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting end
+    helper_method: current_user
+                 ^):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting end
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting end
+app/controllers/flights_controller.rb:1:in `<main>'
+Started GET "/flights" for ::1 at 2020-04-02 12:24:51 -0400
+Started GET "/flights" for ::1 at 2020-04-02 12:26:15 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mFlight Load (22.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:4:in `index'
+Completed 200 OK in 113ms (Views: 4.8ms | ActiveRecord: 90.1ms | Allocations: 3362)
+
+
+Processing by FlightsController#index as HTML
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 893)
+
+
+Started GET "/hotels" for ::1 at 2020-04-02 12:27:52 -0400
+Processing by HotelsController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 43)
+
+
+Started GET "/hotels" for ::1 at 2020-04-02 12:27:56 -0400
+Processing by HotelsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/hotels" for ::1 at 2020-04-02 12:28:25 -0400
+Started GET "/activitybookings" for ::1 at 2020-04-02 12:29:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/activitybookings"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by HotelsController#index as HTML
+  [1m[36mHotel Load (76.5ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels"[0m
+  ↳ app/controllers/hotels_controller.rb:5:in `index'
+Completed 200 OK in 144ms (Views: 16.4ms | ActiveRecord: 103.1ms | Allocations: 38602)
+
+
+Started GET "/activity_bookings" for ::1 at 2020-04-02 12:29:38 -0400
+Processing by ActivityBookingsController#index as HTML
+  [1m[36mActivityBooking Load (22.4ms)[0m  [1m[34mSELECT "activity_bookings".* FROM "activity_bookings"[0m
+  ↳ app/controllers/activity_bookings_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 3.1ms | ActiveRecord: 26.5ms | Allocations: 2681)
+
+
