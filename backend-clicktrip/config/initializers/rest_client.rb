@@ -1,8 +1,27 @@
 require 'rest-client'
 require 'rails/configuration'
 
+require 'uri'
+require 'net/https'
+
+# url = URI("https://api.travelpayouts.com/v1/airline-directions?airline_code=SU&limit=10")
+
+# http = Net::HTTP.new(url.host, url.port)
+
+# request = Net::HTTP::Get.new(url)
+# request["x-access-token"] = '321d6a221f8926b5ec41ae89a3b2ae7b'
+
+# response = http.request(request)
+# puts response.read_body
+
 # TravelPayouts API Endpoint - flights
-travelpayouts_url = 'http://api.travelpayouts.com/'
+travelpayouts_url = URI('http://api.travelpayouts.com/v1/city-directions?origin=MOW&currency=usd')
+http_travelpayouts = Net::HTTP.new(travelpayouts_url.host, travelpayouts_url.port)
+request = Net::HTTP::Get.new(travelpayouts_url)
+request["x-access-token"] = ENV["TRAVELPAYOUTS_KEY"]
+puts "KEY: #{ENV["TRAVELPAYOUTS_KEY"]}"
+response = http_travelpayouts.request(request)
+puts response.read_body
 
 # Hotelbeds API Endpoint - hotels
 apitude_hotels_url = ''
@@ -18,8 +37,9 @@ yelp_url = ''
 
 
 # RestClient get rquest to TravelPayouts endpoint
-# data = JSON.parse(RestClient.get("#{travelpayouts_url}v1/city-directions?origin=NYC&currency=usd&token=#{ENV["TRAVELPAYOUTSKEY"]}"))
-# console.log(data)
+# data = JSON.parse(RestClient.get("#{travelpayouts_url}#{ENV["TRAVELPAYOUTSKEY"]}"))
+# puts "DATA:::"
+# puts data
 
 
 # The popular destinations - Brings back the most popular directions from a specified city.

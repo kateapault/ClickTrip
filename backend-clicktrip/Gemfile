@@ -43,3 +43,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # used for api calls
 gem 'rest-client', '>= 2.0'
+
+# used for setting up environment variables that actually work
+gem 'dotenv-rails'
