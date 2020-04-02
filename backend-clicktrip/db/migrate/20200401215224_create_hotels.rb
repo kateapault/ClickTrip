@@ -5,6 +5,7 @@ class CreateHotels < ActiveRecord::Migration[6.0]
       t.float :long
       t.string :address
       t.string :company
+      t.float :price
 
       t.timestamps
     end

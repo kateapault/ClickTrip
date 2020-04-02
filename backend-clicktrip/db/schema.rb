@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "type"
     t.time "open_time"
     t.time "close_time"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "airline"
     t.string "flight_num"
     t.integer "num_stops"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -76,6 +78,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.float "long"
     t.string "address"
     t.string "company"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
