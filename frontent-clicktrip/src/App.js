@@ -1,15 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
+import ViewContainer from './ViewContainer'
+import NavBar from './NavBar'
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <h1>
-        <p>ClickTrip</p>
-        
-      </h1>
+      <NavBar />
+      <ViewContainer />
     </div>
+    </Router>
   );
 }
 
