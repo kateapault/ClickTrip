@@ -4,19 +4,19 @@ import FlightItem from './FlightItem'
 class FlightSelection extends React.Component {
 
   componentDidMount() {
-
-  }
-  
-  render () {
     let flights = []
     let flightsObject = JSON.parse(window.sessionStorage.getItem('flights'))
     let flightsKeys = Object.keys(flightsObject)
     for(let i=0;i<flightsKeys.length;i++) {
           flights.push(flightsObject[flightsKeys[i]])
     }
+    this.props.addFlightsToState(flights)
+  }
 
+  render () {
+    let flights = this.props.flights
+    
     return (
-
       <div>
         I'm the flight selection container. Here are my flights.
         {/* {console.log('flights: ')}
