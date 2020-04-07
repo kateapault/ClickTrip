@@ -23,3 +23,8 @@ div.view {
   margin-left: 20vw;
   height: 40vh;
 }
+
+div.flight {
+  width: 100%;
+  border: 1px solid green;
+}

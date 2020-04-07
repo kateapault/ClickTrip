@@ -4,28 +4,26 @@ import FlightItem from './FlightItem'
 class FlightSelection extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3000/search-flights',{
-      method:'POST'
-    })
-    .then(resp => resp.json())
-    .then( flights => {
-      // let flightsHash = flights.data;
-      // let flightsDest = Object.keys(flightsHash)
-      // let flightsArr = []
-      // for(let i=0;i<flightsDest.length;i++) {
-      //   flightsArr.push(flightsHash[flightsDest[i]])
-      // }
-      window.sessionStorage.setItem('flights',JSON.stringify(flights.data))
-    })
+
   }
+  
   render () {
+    let flights = []
+    let flightsObject = JSON.parse(window.sessionStorage.getItem('flights'))
+    let flightsKeys = Object.keys(flightsObject)
+    for(let i=0;i<flightsKeys.length;i++) {
+          flights.push(flightsObject[flightsKeys[i]])
+    }
+
     return (
 
       <div>
         I'm the flight selection container. Here are my flights.
         {/* {console.log('flights: ')}
         {console.log(this.props.flights)} */}
-        {this.props.flights.length > 0 ? this.props.flights.map(flight => <FlightItem flight={flight} />) : 'no flights yet'}
+        {flights.length > 0 ? flights.map((flight, index) => <FlightItem key={index} flight={flight} />) : 'no flights yet'}
+        <br></br>
+        <button>SELECT</button>
       </div>
     );
   }

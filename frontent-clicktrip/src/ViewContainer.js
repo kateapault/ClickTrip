@@ -19,8 +19,14 @@ class ViewContainer extends React.Component {
         }
     }
 
-    handleAddFlightsToState = (f) => {
-        this.setState({flights: f})
+    getFlights = () => {
+        fetch('http://localhost:3000/search-flights',{
+            method:'POST'
+            })
+            .then(resp => resp.json())
+            .then( flights => {
+                window.sessionStorage.setItem('flights',JSON.stringify(flights.data))
+        })
     }
 
     componentDidMount() {
@@ -58,7 +64,7 @@ class ViewContainer extends React.Component {
                         price search
                     </Route>
                     <Route path="/flight-selection">
-                        <FlightSelection flights={this.state.flights} addFlights={this.handleAddFlightsToState} />
+                        <FlightSelection flights={this.state.flights} />
                     </Route>
                     <Route path="/hotel-selection">
                         <HotelSelection hotels={this.state.hotels}/>

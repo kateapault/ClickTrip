@@ -3,8 +3,8 @@ import React from 'react';
 function FlightItem(props) {
   return (
 
-    <div>
-      flight to {props.destination}
+    <div className="flight">
+      flight to {props.flight.destination}
     </div>
   );
 }
