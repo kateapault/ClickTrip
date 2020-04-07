@@ -12,18 +12,14 @@ code {
     monospace;
 }
 
+div.nav > a {
+  border: 1px solid black;
+}
+
 div.view {
   border: 1px solid black;
   border-radius: 5px;
   width: 60vw;
   margin-left: 20vw;
   height: 40vh;
-}
-
-div.view > div {
-  background-color: grey;
-  height: 75%;
-  width: 90%;
-  margin: auto;
-  border-radius: 8px;
 }

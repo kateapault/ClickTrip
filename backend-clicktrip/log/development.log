@@ -124,3 +124,1979 @@ Processing by ActivityBookingsController#index as HTML
 Completed 200 OK in 47ms (Views: 3.1ms | ActiveRecord: 26.5ms | Allocations: 2681)
 
 
+Started POST "/flight-search" for ::1 at 2020-04-06 14:01:56 -0400
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flight-search" for ::1 at 2020-04-06 14:03:34 -0400
+Started POST "/flight-search" for ::1 at 2020-04-06 14:03:34 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flight-search" for ::1 at 2020-04-06 14:07:37 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flight-search" for ::1 at 2020-04-06 14:08:29 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flight-search" for ::1 at 2020-04-06 14:09:02 -0400
+Started POST "/flight-search" for ::1 at 2020-04-06 14:09:02 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flight-search" for ::1 at 2020-04-06 14:09:03 -0400
+Started POST "/flight-search" for ::1 at 2020-04-06 14:09:03 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/flight-search"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:09:36 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:09:36 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 620ms (ActiveRecord: 0.0ms | Allocations: 135533)
+
+
+Completed 500 Internal Server Error in 628ms (ActiveRecord: 0.0ms | Allocations: 139704)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd5038eb018>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd5038ea780>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:44 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:44 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 690ms (ActiveRecord: 0.0ms | Allocations: 133272)
+
+
+Completed 500 Internal Server Error in 801ms (ActiveRecord: 0.0ms | Allocations: 139924)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd5005ce018>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd5005df228>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:55 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:55 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 944ms (ActiveRecord: 0.0ms | Allocations: 122117)
+
+
+Completed 500 Internal Server Error in 828ms (ActiveRecord: 0.0ms | Allocations: 110437)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:56 -0400
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd50053caf0>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:10:57 -0400
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd503b0bac8>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms | Allocations: 69994)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd501e2e770>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.0ms | Allocations: 69945)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd50045f088>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started GET "/" for ::1 at 2020-04-06 14:11:34 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kater/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kater/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.1ms | Allocations: 315)
+Completed 200 OK in 34ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 1594)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-04-06 14:11:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/search-flights" for ::1 at 2020-04-06 14:11:45 -0400
+Processing by FlightsController#search as HTML
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 0.0ms | Allocations: 69874)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd500af9f60>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:01 -0400
+Processing by FlightsController#search as HTML
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.0ms | Allocations: 69888)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd5039da898>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:05 -0400
+Processing by FlightsController#search as HTML
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 0.0ms | Allocations: 69866)
+
+
+  
+NameError (undefined local variable or method `https' for #<FlightsController:0x00007fd500cac948>
+Did you mean?  http):
+  
+app/controllers/flights_controller.rb:19:in `search'
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:11 -0400
+Processing by FlightsController#search as HTML
+Completed 200 OK in 1508ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 827)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:25 -0400
+Processing by FlightsController#search as HTML
+Completed 200 OK in 301ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 537)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:41 -0400
+Processing by FlightsController#search as HTML
+Completed 200 OK in 233ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 441)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:12:49 -0400
+Processing by FlightsController#search as HTML
+Completed 200 OK in 276ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:13:07 -0400
+Processing by FlightsController#search as HTML
+Completed 200 OK in 199ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 440)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:13:25 -0400
+Processing by FlightsController#search as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 3137)
+
+
+  
+NameError (uninitialized constant Net::HTTPS
+Did you mean?  Net::HTTPOK):
+  
+app/controllers/flights_controller.rb:14:in `search'
+  [1m[36mFlight Load (27.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/flights-results" for ::1 at 2020-04-06 14:49:53 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/flights-results"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/flight-results" for ::1 at 2020-04-06 14:49:57 -0400
+Processing by FlightsController#results as HTML
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.0ms | Allocations: 69855)
+
+
+  
+NameError (undefined local variable or method `data' for #<FlightsController:0x00007fe4a1970418>):
+  
+app/controllers/flights_controller.rb:59:in `results'
+Started GET "/flight-results" for ::1 at 2020-04-06 14:50:04 -0400
+Processing by FlightsController#results as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-06 14:50:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/search-flights"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:50:37 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:50:37 -0400
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms | Allocations: 128)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:51:25 -0400
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 524ms (ActiveRecord: 0.0ms | Allocations: 70305)
+
+
+  
+NameError (undefined local variable or method `console' for #<FlightsController:0x00007fe4a1ad8170>):
+  
+app/controllers/flights_controller.rb:26:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:52:39 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:52:39 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 0.0ms | Allocations: 87728)
+
+
+Completed 500 Internal Server Error in 672ms (ActiveRecord: 0.0ms | Allocations: 162559)
+
+
+  
+NameError (undefined local variable or method `console' for #<FlightsController:0x00007fe49e71cc78>):
+  
+app/controllers/flights_controller.rb:26:in `search'
+  
+NameError (undefined local variable or method `console' for #<FlightsController:0x00007fe49e717368>):
+  
+app/controllers/flights_controller.rb:26:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:52:56 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:52:56 -0400
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.0ms | Allocations: 464)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/flights_controller.rb:58:in `results'
+app/controllers/flights_controller.rb:29:in `search'
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms | Allocations: 473)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/flights_controller.rb:58:in `results'
+app/controllers/flights_controller.rb:29:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:55:03 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:55:04 -0400
+Processing by FlightsController#search as */*
+Redirected to 
+Completed 500 Internal Server Error in 343ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 550)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `search'
+Processing by FlightsController#search as */*
+Redirected to 
+Completed 500 Internal Server Error in 210ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 551)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:55:44 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:55:45 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight_results
+Completed 302 Found in 249ms (ActiveRecord: 0.0ms | Allocations: 468)
+
+
+Started GET "/flight_results" for ::1 at 2020-04-06 14:55:45 -0400
+Processing by FlightsController#search as */*
+  
+ActionController::RoutingError (No route matches [GET] "/flight_results"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Redirected to http://localhost:3000/flight_results
+Completed 302 Found in 199ms (ActiveRecord: 0.0ms | Allocations: 6849)
+
+
+Started GET "/flight_results" for ::1 at 2020-04-06 14:55:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/flight_results"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search-flights" for ::1 at 2020-04-06 14:56:06 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:56:06 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 208ms (ActiveRecord: 0.0ms | Allocations: 447)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-06 14:56:07 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 75)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 203ms (ActiveRecord: 0.0ms | Allocations: 972)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-06 14:56:07 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-06 14:56:46 -0400
+Started POST "/search-flights" for ::1 at 2020-04-06 14:56:46 -0400
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.0ms | Allocations: 501)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.0ms | Allocations: 510)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-07 11:32:04 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 11:32:04 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms | Allocations: 1193)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-07 11:39:34 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 11:39:34 -0400
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlightsController#search as */*
+  [1m[35m (100.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlightsController#search as */*
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 1214)
+
+
+  
+URI::InvalidURIError (bad URI(no host provided): http://):
+  
+app/controllers/flights_controller.rb:24:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-07 11:40:20 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 11:40:20 -0400
+Processing by FlightsController#search as */*
+Redirected to 
+Completed 500 Internal Server Error in 328ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 618)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `search'
+Processing by FlightsController#search as */*
+Redirected to 
+Completed 500 Internal Server Error in 205ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `search'
+Started POST "/search-flights" for ::1 at 2020-04-07 11:40:50 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 11:40:50 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 228ms (ActiveRecord: 0.0ms | Allocations: 862)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 11:40:51 -0400
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 239ms (ActiveRecord: 0.0ms | Allocations: 1392)
+
+
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 76)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 11:40:51 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:10:10 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:10:10 -0400
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+...redirect_to "/flight-results" (@data=@data)
+...                              ^
+/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+..."/flight-results" (@data=@data)
+...                              ^
+/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end
+  
+SyntaxError (/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+...redirect_to "/flight-results" (@data=@data)
+...                              ^
+/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+..."/flight-results" (@data=@data)
+...                              ^
+/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected '(', expecting end
+app/controllers/flights_controller.rb:34: syntax error, unexpected ')', expecting end
+app/controllers/flights_controller.rb:67: syntax error, unexpected end-of-input, expecting end
+Started POST "/search-flights" for ::1 at 2020-04-07 12:10:33 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:10:33 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 787ms (ActiveRecord: 0.0ms | Allocations: 1025)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:10:34 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 476ms (ActiveRecord: 0.0ms | Allocations: 936)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:10:35 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:12:54 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:12:55 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 1195ms (ActiveRecord: 0.0ms | Allocations: 951)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:12:56 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 74)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 456ms (ActiveRecord: 0.0ms | Allocations: 1777)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:12:57 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:42 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:42 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 1024ms (ActiveRecord: 0.0ms | Allocations: 933)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:43 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 512ms (ActiveRecord: 0.0ms | Allocations: 935)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:44 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:48 -0400
+Started GET "/search-flights" for ::1 at 2020-04-07 12:13:48 -0400
+Processing by FlightsController#search as */*
+  
+ActionController::RoutingError (No route matches [GET] "/search-flights"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:48 -0400
+Started GET "/search-flights" for ::1 at 2020-04-07 12:13:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/search-flights"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 1184ms (ActiveRecord: 0.0ms | Allocations: 14360)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:49 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 418ms (ActiveRecord: 0.0ms | Allocations: 924)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:53 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:53 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:13:53 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:53 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 407ms (ActiveRecord: 0.0ms | Allocations: 3560)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:53 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 455ms (ActiveRecord: 0.0ms | Allocations: 3855)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:13:53 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:03 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:03 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:03 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:04 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 485ms (ActiveRecord: 0.0ms | Allocations: 3242)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:05 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 466ms (ActiveRecord: 0.0ms | Allocations: 3826)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:05 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:10 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:10 -0400
+Processing by FlightsController#search as */*
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 538ms (ActiveRecord: 0.0ms | Allocations: 1669)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 551ms (ActiveRecord: 0.0ms | Allocations: 2815)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:11 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:11 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:35 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:35 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 189)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:35 -0400
+Processing by FlightsController#search as */*
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:35 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 457ms (ActiveRecord: 0.0ms | Allocations: 2347)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:35 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 828ms (ActiveRecord: 0.0ms | Allocations: 5650)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:35 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:54 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:54 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:55 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:55 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 459ms (ActiveRecord: 0.0ms | Allocations: 4028)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:55 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 432ms (ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:55 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:58 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:58 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:14:58 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:58 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 452ms (ActiveRecord: 0.0ms | Allocations: 1695)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:59 -0400
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 489ms (ActiveRecord: 0.0ms | Allocations: 5125)
+
+
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:14:59 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:15:02 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:02 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:15:02 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:02 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 441ms (ActiveRecord: 0.0ms | Allocations: 1996)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 490ms (ActiveRecord: 0.0ms | Allocations: 4002)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:02 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:02 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:15:11 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:11 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:15:11 -0400
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:11 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 471ms (ActiveRecord: 0.0ms | Allocations: 3779)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:12 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Redirected to http://localhost:3000/flight-results
+Completed 302 Found in 465ms (ActiveRecord: 0.0ms | Allocations: 3758)
+
+
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:12 -0400
+Processing by FlightsController#results as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/search-flights" for ::1 at 2020-04-07 12:15:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/search-flights"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/flight-results" for ::1 at 2020-04-07 12:15:36 -0400
+Processing by FlightsController#results as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 71)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:37 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:38 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 478ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 948)
+
+
+Processing by FlightsController#search as */*
+Completed 200 OK in 570ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 942)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:41 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:42 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 510ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1315)
+
+
+Completed 200 OK in 528ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1929)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:44 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:44 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 548ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2111)
+
+
+Completed 200 OK in 1206ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1943)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:50 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:50 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 573ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Completed 200 OK in 656ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1933)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:53 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:53 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 454ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1932)
+
+
+Completed 200 OK in 436ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1909)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:55 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:55 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 445ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2113)
+
+
+Completed 200 OK in 418ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1935)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:58 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:16:58 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 428ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1934)
+
+
+Completed 200 OK in 448ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1911)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:21:14 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:21:15 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 635ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1653)
+
+
+Completed 200 OK in 713ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:09 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:09 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 459ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1170)
+
+
+Completed 200 OK in 1364ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2561)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:33 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:33 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 490ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1184)
+
+
+Completed 200 OK in 533ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2530)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:41 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:41 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 515ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1795)
+
+
+Completed 200 OK in 507ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1909)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:57 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:22:57 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 449ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1189)
+
+
+Completed 200 OK in 482ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2073)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:03 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:03 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 444ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1792)
+
+
+Completed 200 OK in 445ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1931)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:24 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:24 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 451ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2112)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:24 -0400
+Completed 200 OK in 494ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2254)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:24 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 484ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1605)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:25 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 860ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2953)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:25 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 480ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:26 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 466ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2684)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:26 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 452ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:26 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 443ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Completed 200 OK in 478ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:28 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:28 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 544ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1950)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:28 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 1192ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3136)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:29 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 447ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 919)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:29 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 1204ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4720)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:29 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 475ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:30 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 442ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:30 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 441ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:30 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 444ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2868)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:30 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 469ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:31 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 473ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:31 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 402ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2865)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:31 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 468ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:31 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 424ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2686)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:32 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 495ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:32 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 457ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:32 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 459ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2799)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:32 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 492ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:33 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 455ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:33 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 418ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2683)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:33 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 443ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:33 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 447ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2869)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:34 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 472ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2863)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:34 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 413ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2863)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:34 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 465ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:34 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 535ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:35 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 466ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:35 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 448ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:35 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 498ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2681)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:35 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 520ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:36 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 475ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:36 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 458ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:36 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 456ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:36 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 435ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:37 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 477ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2857)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:37 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 478ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2925)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:37 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 442ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:37 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 477ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:38 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 495ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2863)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:38 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 544ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:38 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 423ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2844)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:38 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 425ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:39 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 414ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:39 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 444ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:39 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 879ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4808)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:40 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 450ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2590)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:40 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 533ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:40 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 494ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2840)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:40 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 438ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:41 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 435ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2837)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:41 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 882ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2591)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:42 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 417ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1005)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:42 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 1879ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 5059)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:23:43 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 479ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Completed 200 OK in 1184ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3802)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:58 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:58 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 513ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1187)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:59 -0400
+Completed 200 OK in 560ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:59 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 440ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1790)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:59 -0400
+Completed 200 OK in 458ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2217)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:24:59 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 475ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1183)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 503ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3466)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 466ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 472ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 469ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2864)
+
+
+Completed 200 OK in 458ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1936)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:01 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:01 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 479ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1184)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:01 -0400
+Completed 200 OK in 531ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2827)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:02 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 443ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1323)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:02 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 472ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:02 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 513ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2528)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:03 -0400
+Completed 200 OK in 498ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2253)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:03 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 436ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1613)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:03 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 830ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3130)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:03 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 479ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2770)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:03 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 433ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2865)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:04 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 410ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2840)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:04 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 424ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1189)
+
+
+Completed 200 OK in 495ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3611)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:04 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:25:04 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 448ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1793)
+
+
+Completed 200 OK in 490ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1935)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:26:56 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:26:56 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 471ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 985)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:26:58 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 805ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 919)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:26:58 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 2728ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 5422)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 498ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 982)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 1832ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4739)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:00 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 464ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:01 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 897ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2929)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:01 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 777ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:01 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 472ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2857)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:02 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 500ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:02 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 459ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 918)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:02 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 924ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4719)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:03 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 466ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 984)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:03 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 1092ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4808)
+
+
+Completed 200 OK in 454ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1841)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:04 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:04 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 480ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+Completed 200 OK in 497ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2070)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:04 -0400
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:04 -0400
+Processing by FlightsController#search as */*
+Processing by FlightsController#search as */*
+Completed 200 OK in 426ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1795)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:05 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 496ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2862)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:05 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 481ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:05 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 466ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:05 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 471ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2857)
+
+
+Completed 200 OK in 443ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1932)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:13 -0400
+Processing by FlightsController#search as */*
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:13 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 460ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1182)
+
+
+Completed 200 OK in 505ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2877)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:15 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 444ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 916)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:27:41 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 491ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 914)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:28:27 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 498ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 913)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:28:59 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 511ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 913)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:29:26 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 499ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 916)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:29:33 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 526ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 913)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:29:44 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 421ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 918)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:30:01 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 508ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:30:07 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 530ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 916)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:30:25 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 684ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 917)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:30:30 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 494ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 919)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:31:40 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 467ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 918)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:34:01 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 555ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 917)
+
+
+Started POST "/search-flights" for ::1 at 2020-04-07 12:34:29 -0400
+Processing by FlightsController#search as */*
+Completed 200 OK in 520ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 913)
+
+

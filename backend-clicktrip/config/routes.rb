@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :activity_bookings
   resources :sessions, only: [:new, :create, :destroy]
 
+  post '/search-flights', to: 'flights#search'
+  get '/flight-results', to: 'flights#results'
+
 end

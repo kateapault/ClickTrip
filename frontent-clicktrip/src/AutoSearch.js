@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form } from 'semantic-ui-react';
 import DatePicker from "react-datepicker";
+import history from './history'
  
 // import "react-datepicker/dist/react-datepicker.css";
 class AutoSearch extends React.Component {
@@ -10,29 +11,30 @@ class AutoSearch extends React.Component {
             num_people:'',
             budget:'',
             start_date:'',
-            end_date:''
+            end_date:'',
+            origin_city_iata: ''
         }
     }
 
-    handleChange = () => {
-
+    handleSearchFlights = () => {
+        
     }
 
     render() {
         return (
 
             <div>
-            <Form>
-                {/* <Form.Group widths="equal"> */}
-                    <Form.Input fluid onChange={this.handleChange} label="Budget" placeholder="1200" value={this.state.name} name="budget" />
-                    <Form.Input fluid onChange={this.handleChange} label="Number of people" placeholder="2" name="num_people" />
-                    <Form.Input fluid onChange={this.handleChange} label="start date" placeholder="mm/dd/yyyy" name="start_date" />
-                    <Form.Input fluid onChange={this.handleChange} label="end date" placeholder="mm/dd/yyyy" name="end_date" />
-                {/* </Form.Group> */}
-            </Form>
-            
-            
-            <a href="/itinerary">link to itinerary</a>
+                <form>
+                    I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
+                    <br></br>
+                    for under $<input type="number" name="budget" placeholder="1200" />
+                    <br></br>
+                    from <input type="date" name="start_date" /> to <input type="date" name="end_date" />
+                    <br></br>
+                    flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
+                    <br></br>
+                    <button onClick={() => history.push('/flight-selection')}>Take me away!</button>
+                </form>
             </div>
         );
     }

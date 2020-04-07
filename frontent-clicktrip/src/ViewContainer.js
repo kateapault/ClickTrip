@@ -2,28 +2,51 @@ import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import AutoSearch from './AutoSearch'
 import DestinationSearch from './DestinationSearch'
+import FlightSelection from './FlightSelection'
+import HotelSelection from './HotelSelection'
+import ActivitySelection from './ActivitySelection'
+import Itinerary from './Itinerary'
+const BASEURL = 'http://localhost:3000'
 
 class ViewContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            view: 'search'      // search, selection, itinerary, profile, login/signup
+            flights: [],
+            cityIATA: '',
+            hotels: [],
+            activites: []
         }
+    }
+
+    handleAddFlightsToState = (f) => {
+        this.setState({flights: f})
     }
 
     componentDidMount() {
         this.setState({view:'search'})
     }
 
-    handleClickToItinerary = () => {
-        this.setState({view:'itinerary'})
+    handleClickAutoSearchSubmit = () => {
+        // create new trip instance
+        fetch(BASEURL + '/trips', {
+            method:'POST',
+            header: '',
+            body: JSON.stringify()
+        })
+
+        // add info from form
+    }
+
+    handleClickDestSearchSubmit = () => {
+        // create new trip instance
+        // add info from form
     }
 
     render() {
 
         return (
             <div className="view">
-                --view container --
                 <Switch>
                     <Route exact path="/">
                         <AutoSearch />
@@ -35,16 +58,16 @@ class ViewContainer extends React.Component {
                         price search
                     </Route>
                     <Route path="/flight-selection">
-                        flight selection
+                        <FlightSelection flights={this.state.flights} addFlights={this.handleAddFlightsToState} />
                     </Route>
                     <Route path="/hotel-selection">
-                        hotel selection
+                        <HotelSelection hotels={this.state.hotels}/>
                     </Route>
                     <Route path="/activity-selection">
-                        activity selection
+                        <ActivitySelection activities={this.state.activites} />
                     </Route>
                     <Route path="/itinerary">
-                        itinerary
+                        <Itinerary />
                     </Route>
                     <Route path="/trips">
                         trips
