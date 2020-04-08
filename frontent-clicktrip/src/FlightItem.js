@@ -4,22 +4,12 @@ function FlightItem(props) {
   return (
 
     <div className="flight">
-      <div className="dest-iata">Destination: {props.flight.destination ? props.flight.destination : "DUB"}</div>
-      <div className="price">Price: {props.flight.price}</div>
-      <div className="">Depart: {props.flight.departure_at}</div>
-      <div>Airline: {props.flight.airline}</div>
-
-      <button>SELECT</button>
+      {props.flight.airline} {props.flight.flight_number}
+       | {props.flight.departure_airport} ⮕ {props.flight.arrival_airport}
+       | {props.flight.departure_date} {props.flight.departure_time} ⮕ {props.flight.arrival_time} {props.flight.departure_date === props.flight.arrival_date ? '':'+1'}
+       | {props.flight.stops > 0 ? `${props.flight.stops} stops` : 'Nonstop'}
+       | ${props.flight.price} <button>SELECT</button>
     </div>
-  // origin: "NYC"
-  // destination: "DXB"
-  // price: 483
-  // transfers: 3
-  // airline: "DY"
-  // flight_number: 7002
-  // departure_at: "2020-05-05T22:05:00Z"
-  // return_at: "2020-05-12T22:15:00Z"
-  // expires_at: "2020-04-08T11:39:08Z"
   );
 }
 

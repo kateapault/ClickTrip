@@ -12,6 +12,17 @@ import TripsContainer from './Trips'
 const BASEURL = 'http://localhost:3000'
 
 class ViewContainer extends React.Component {
+    // NOTE: NEED TO ADD IN CHECK TO MAKE SURE SESSION STORAGE WORKS ON USER'S MACHINE!!!
+
+    // sessionStorage:
+    //      userID          user's id
+    //      trips           all user's trips
+    //      currentTrip     active trip object (as stringified JSON)
+    //      currentTripID   active trip's id
+    //      flights         response from flight search
+    //      hotels          response from hotel search
+    //      activites       response from activity search
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,29 +33,59 @@ class ViewContainer extends React.Component {
             trips:[],
             currentTrip: {},
             currentTripID: 0,
+            currentCost: 0.0,
         }
     }
 
-    // addFlightsToState = (f) => {
-    //     this.setState({flights:f})
-    // }
-
-    // callHotelAPI = () => {
-
-    // }
-
-    // addHotelsToState = (h) => {
-    //     this.setState({hotels:h})
-    // }
-
     componentDidMount() {
+        // set user ID on load
+        window.sessionStorage.setItem('userID',1)
+        
+        // set trips on load
         fetch(`http://localhost:3000/users/${this.state.user_id}/trips`)
         .then(resp => resp.json())
         .then(response =>
-            this.setState({
-                trips: response
-            })
+            window.sessionStorage.setItem('trips',JSON.stringify(response))
         )
+    }
+
+    handleSearchSubmit = (e) => {
+        e.preventDefault()
+        fetch('http://localhost:3000/search-dummy-flights',{
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(flights => {
+            window.sessionStorage.setItem('flights',JSON.stringify(flights))
+        })
+        .then(resp =>
+            window.location = ('/flight-selection')
+        )
+    }
+
+    handleFlightSubmit = (e) => {
+
+    }
+
+    handleAutoSearchSubmit = () => {
+        // create blank trip
+        // fetch(BASEURL + '/trips', {
+        //     method:'POST',
+        //     header: {'ContentType':'application/json'},
+        // })
+        // .then(response => response.json())
+        // .then(newTrip => {
+        //     window.sessionStorage.setItem('currentTrip',JSON.stringify(newTrip))
+        //     window.sessionStorage.setItem('currentTripID',newTrip.id)
+        // })
+    }
+
+    handleManualSearchSubmit = () => {
+
+    }
+
+    handleDestSearchSubmit = () => {
+
     }
 
     // callPriceFlightAPI = (params) => {
@@ -116,7 +157,7 @@ class ViewContainer extends React.Component {
             <div className="view">
                 <Switch>
                     <Route exact path="/">
-                        <AutoSearch />
+                        <AutoSearch handleClick={this.handleSearchSubmit}/>
                     </Route>
                     <Route exact path='/destination-search'>
                         <DestinationSearch callFlightAPI={this.callDestFlightAPI}/>

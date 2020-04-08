@@ -1,32 +1,30 @@
 import React from 'react';
 import FlightItem from './FlightItem'
 
-class FlightSelection extends React.Component {
-
-  componentDidMount() {
-    let flights = []
-    let flightsObject = JSON.parse(window.sessionStorage.getItem('flights'))
-    let flightsKeys = Object.keys(flightsObject)
-    for(let i=0;i<flightsKeys.length;i++) {
-          flights.push(flightsObject[flightsKeys[i]])
-    }
-    this.props.addFlightsToState(flights)
-  }
-
-  render () {
-    let flights = this.props.flights
-    
+function FlightSelection(props) {
+    let flightsJSON = JSON.parse(window.sessionStorage.getItem('flights'))
+    let flightsKeys = Object.keys(flightsJSON)
+    let flights = flightsKeys.map(key => flightsJSON[key])
     return (
       <div>
-        I'm the flight selection container. Here are my flights.
-        {/* {console.log('flights: ')}
-        {console.log(this.props.flights)} */}
-        {flights.length > 0 ? flights.map((flight, index) => <FlightItem key={index} flight={flight} />) : 'no flights yet'}
-        <br></br>
-        <button>SELECT</button>
+        {console.log(flights)}
+        <form className="selection">
+          {flights.map((flight, index) => 
+            <label key={index} >
+              <input type="radio"
+                  name="flight-Select"
+                  value={flight}
+                  required
+              />
+              <FlightItem flight={flight} />
+            </label>
+          )}
+          <br></br>
+          <button>I want this flight!</button>
+        </form>
       </div>
     );
-  }
+  
 }
 
 export default FlightSelection;

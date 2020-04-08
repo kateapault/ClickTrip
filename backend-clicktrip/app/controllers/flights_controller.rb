@@ -28,8 +28,8 @@ class FlightsController < ApplicationController
     ##################################################################################
 
     def dummysearch
-        flights = [
-            {departure_airport: 'NYC',
+        flights = {
+            a:{departure_airport: 'NYC',
             departure_date: '2020-05-11',
             departure_time: '19:22',
             arrival_airport: 'DUB',
@@ -40,7 +40,7 @@ class FlightsController < ApplicationController
             stops: '0',
             price: '654.32'},
 
-            {departure_airport: 'NYC',
+            b:{departure_airport: 'NYC',
             departure_date: '2020-05-12',
             departure_time: '11:42',
             arrival_airport: 'DUB',
@@ -51,7 +51,7 @@ class FlightsController < ApplicationController
             stops: '0',
             price: '559.32'},
 
-            {departure_airport: 'NYC',
+            c:{departure_airport: 'NYC',
             departure_date: '2020-05-11',
             departure_time: '22:10',
             arrival_airport: 'DUB',
@@ -61,7 +61,7 @@ class FlightsController < ApplicationController
             flight_number: '34B4',
             stops: '1',
             price: '344.22'}
-        ]
+        }
 
         render json: flights
     end

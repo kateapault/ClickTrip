@@ -33,7 +33,7 @@ class AutoSearch extends React.Component {
                     <br></br>
                     flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
                     <br></br>
-                    <button onClick={this.props.callPriceFlightAPI}>Take me away!</button>
+                    <button onClick={this.props.handleClick}>Take me away!</button>
                 </form>
             </div>
         );
