@@ -2,16 +2,26 @@ import React from 'react';
 import HotelItem from './HotelItem'
 
 function HotelSelection(props) {
-  // const cheerio = require('cheerio')
-
+  let hotelsJSON = JSON.parse(window.sessionStorage.getItem('hotels'))
+  let hotelsKeys = Object.keys(hotelsJSON)
+  let hotels = hotelsKeys.map(key => hotelsJSON[key])
   return (
-
     <div>
+      Select a hotel 🛏️
       <form className="selection" onSubmit={props.handleSubmit}>
-        <button>This hotel!</button>
+        {hotels.map((hotel, index) => 
+          <label key={index} >
+            <input type="radio"
+                name="hotel-select"
+                value={hotel}
+                required
+            />
+            <HotelItem hotel={hotel} />
+          </label>
+        )}
+        <br></br>
+        <button>I want this hotel!</button>
       </form>
-      I'm the hotel selection container. Here are my hotels.
-      {props.hotels ? props.hotels.map(hotel => <HotelItem hotel={hotel} />) : 'no hotels yet'}
     </div>
   );
 }

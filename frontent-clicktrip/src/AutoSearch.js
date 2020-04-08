@@ -1,9 +1,5 @@
 import React from 'react';
-import { Form } from 'semantic-ui-react';
-import DatePicker from "react-datepicker";
-import history from './history'
  
-// import "react-datepicker/dist/react-datepicker.css";
 class AutoSearch extends React.Component {
     constructor() {
         super()
