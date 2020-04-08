@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
+    t.integer "trip_id"
     t.float "lat"
     t.float "long"
     t.string "city"
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "type"
     t.time "open_time"
     t.time "close_time"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
   end
 
   create_table "flights", force: :cascade do |t|
+    t.integer "trip_id"
     t.string "departure_airport"
     t.time "departure_time"
     t.date "departure_date"
@@ -56,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "airline"
     t.string "flight_num"
     t.integer "num_stops"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -72,10 +76,14 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
   end
 
   create_table "hotels", force: :cascade do |t|
+    t.integer "trip_id"
     t.float "lat"
     t.float "long"
     t.string "address"
     t.string "company"
+    t.float "price"
+    t.date "checkin"
+    t.date "checkout"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -96,7 +104,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password_digest"
+    t.string "password"
     t.string "firstname"
     t.string "lastname"
     t.string "email"

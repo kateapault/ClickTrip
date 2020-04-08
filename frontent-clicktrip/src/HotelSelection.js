@@ -2,6 +2,8 @@ import React from 'react';
 import HotelItem from './HotelItem'
 
 function HotelSelection(props) {
+  // const cheerio = require('cheerio')
+
   return (
 
     <div>

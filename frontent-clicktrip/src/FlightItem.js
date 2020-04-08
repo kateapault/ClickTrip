@@ -4,10 +4,12 @@ function FlightItem(props) {
   return (
 
     <div className="flight">
-      <div className="dest-iata">Destination: {props.flight.destination}</div>
+      <div className="dest-iata">Destination: {props.flight.destination ? props.flight.destination : "DUB"}</div>
       <div className="price">Price: {props.flight.price}</div>
       <div className="">Depart: {props.flight.departure_at}</div>
       <div>Airline: {props.flight.airline}</div>
+
+      <button>SELECT</button>
     </div>
   // origin: "NYC"
   // destination: "DXB"

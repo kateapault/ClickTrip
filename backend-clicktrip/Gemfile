@@ -45,5 +45,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rest-client', '>= 2.0'
 gem 'httparty'
 
+
 # for env variables
 gem 'dotenv-rails'

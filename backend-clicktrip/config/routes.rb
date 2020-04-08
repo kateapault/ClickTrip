@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   resources :activity_bookings
   resources :sessions, only: [:new, :create, :destroy]
 
-  post '/search-flights', to: 'flights#search'
+  post '/search-dummy-flights', to: 'flights#dummysearch'
+  post '/search-dummy-hotels', to: 'hotels#dummysearch'
+  post '/search-dummy-activities', to: 'activities#dummysearch'
+
+  post '/search-flights-price', to: 'flights#searchprice'
+  post '/search-flights-dest', to: 'flights#searchdest'
   get '/flight-results', to: 'flights#results'
+  get '/users/:user_id/trips', to: 'users#my_trips'
 
 end

@@ -1,9 +1,16 @@
 class UsersController < ApplicationController
 
     def show
-        @user = current_user
+        @user = User.find(params[:id])
         @profile = User.find(params[:id])
-        render json: @profile
+        render json: @user
+    end
+
+    def my_trips
+        puts params
+        @user = User.find(params[:user_id])
+        @trips = Trip.select{|trip| trip.user_id == @user.id}
+        render json: @trips
     end
 
     def create

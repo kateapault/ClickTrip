@@ -21,7 +21,7 @@ class TripsController < ApplicationController
         render json: trip.update(trip_params)
     end
 
-    def destry
+    def destroy
         trip = Trip.find(params[:id])
         trip.delete
     end

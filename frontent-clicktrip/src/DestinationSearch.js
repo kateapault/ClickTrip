@@ -4,9 +4,13 @@ function DestinationSearch(props) {
   return (
 
     <div>
-      yo I'm a destination search form - I'll tell you when is cheapest to travel to your destination
-      
-      <a href="/itinerary">link to itinerary</a>
+      I want a vaction to <input type="text" name="origin_city_iata" placeholder="LON" />
+      <br></br>
+      for <input type="number" name="num_people" placeholder="2" /> people
+      <br></br>
+      flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
+      <br></br>
+      <button onClick={props.callFlightAPI}>Let's Go!</button>
     </div>
   );
 }

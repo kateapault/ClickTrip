@@ -5,63 +5,100 @@ class FlightsController < ApplicationController
     end
 
     def create
-        
+        flight = Flight.new(flight_params)
+
+        if flight.save
+            flash('flight added!')
+            render json: flight
+        else
+            flash('error! flight not added')
+            render json: {error:flight.save.error}
+        end
     end
 
-    def search
-        # url = URI("https://api.travelpayouts.com/v1/city-directions?origin=NYC&currency=usd")
+    def update
+        flight = Flight.find(params[:id])
+        render json: flight.update(flight_params)
+    end
 
-        # https = Net::HTTP.new(url.host, url.port)
 
-        # request = Net::HTTP::Get.new(url)
-        # request["x-access-token"] = ENV["TRAVELPAYOUTS_KEY"]
 
-        # response = https.request(request)
-        # session[:flights] = response.read_body
-        # puts response.read_body
-        # render json: response.read_body
+    ##################################################################################
+    ### DUMMY DATA ###################################################################
+    ##################################################################################
 
-        # @data = JSON.parse(RestClient.get `https://api.travelpayouts.com/v1/city-directions?origin=NYC&currency=usd&token=#{ENV["TRAVELPAYOUTS_KEY"]}` )
-        # # params = {origin = params[:origin]}
-        # puts @data
-        response = HTTParty.get("https://api.travelpayouts.com/v1/city-directions?origin=NYC&currency=usd&token=#{ENV['TRAVELPAYOUTS_KEY']}")
-        puts 'CODE IS'
-        puts response.code
-        puts 'BODY IS'
-        puts response.body
+    def dummysearch
+        flights = [
+            {departure_airport: 'NYC',
+            departure_date: '2020-05-11',
+            departure_time: '19:22',
+            arrival_airport: 'DUB',
+            arrival_date:'2020-05-12',
+            arrival_time: '6:31',
+            airline: 'AA',
+            flight_number: '773',
+            stops: '0',
+            price: '654.32'},
+
+            {departure_airport: 'NYC',
+            departure_date: '2020-05-12',
+            departure_time: '11:42',
+            arrival_airport: 'DUB',
+            arrival_date:'2020-05-12',
+            arrival_time: '23:09',
+            airline: 'AL',
+            flight_number: '1713',
+            stops: '0',
+            price: '559.32'},
+
+            {departure_airport: 'NYC',
+            departure_date: '2020-05-11',
+            departure_time: '22:10',
+            arrival_airport: 'DUB',
+            arrival_date:'2020-05-12',
+            arrival_time: '12:33',
+            airline: 'PA',
+            flight_number: '34B4',
+            stops: '1',
+            price: '344.22'}
+        ]
+
+        render json: flights
+    end
+
+
+    ##################################################################################
+    ### EXTERNAL DATA ################################################################
+    ##################################################################################
+
+    def searchprice
+        origin = 'NYC'
+        price = 700
+        start_date = '2020-05-01'   # YYYY-MM-DD
+        start_month = start_date[0,7] + '-01'
+        end_date = '2020-05-07' # YYYY-MM-DD
+        duration = (Date.parse(end_date) - Date.parse(start_date)).to_i
+
+        
+        response = HTTParty.get("http://api.travelpayouts.com/v2/prices/month-matrix?currency=usd&origin=#{origin}&month=#{start_month}&token=#{ENV['TRAVELPAYOUTS_KEY']}&trip_duration=#{duration}")
         
         session[:flights] = response.body
         render json: response.body
 
-        # The popular destinations - Brings back the most popular directions from a specified city.
-# Request http://api.travelpayouts.com/v1/city-directions?origin=MOW&currency=usd&token=PutHereYourToken
-# Request parameters: 
-# currency — the airline ticket’s The default value - RUB.
-# origin — the point of departure. The IATA city code or the country code. The length - from 2 to 3 symbols.
-# token — the individual affiliate token.
-# Response 
-# {
-#     "success": true,
-#     "data": {
-#         "AER": {
-#             "origin": "MOW",
-#             "destination": "AER",
-#             "price": 3673,
-#             "transfers": 0,
-#             "airline": "WZ",
-#             "flight_number": 125,
-#             "departure_at": "2016-03-08T16:35:00Z",
-#             "return_at": "2016-03-17T16:05:00Z",
-#             "expires_at": "2016-02-22T09:32:44Z"
-#         }
-#     },
-#     "error": null,
-#     "currency": "rub"
-# }
     end
 
-    def results
-        @data = session[:flights]
-        render json: @data
+    def searchdest
+        origin = 'NYC'
+        destination = 'DUB'
+        response = HTTParty.get("http://api.travelpayouts.com/v1/prices/cheap?origin=#{origin}&destination=#{destination}&currency=usd&token=#{ENV['TRAVELPAYOUTS_KEY']}")
+
+        render json: response.body
     end
+
+    private
+
+    def flight_params
+        params.require(:flight).permit(:trip_id,:departure_airport,:departure_time,:departure_date,:arrival_airport,:arrival_date,:arrival_time,:price,:airline,:flight_num,:num_stops)
+    end
+
 end
