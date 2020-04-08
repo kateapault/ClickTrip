@@ -7,8 +7,11 @@ function HotelSelection(props) {
   return (
 
     <div>
+      <form className="selection" onSubmit={props.handleSubmit}>
+        <button>This hotel!</button>
+      </form>
       I'm the hotel selection container. Here are my hotels.
-      {props.hotels.length > 0 ? props.hotels.map(hotel => <HotelItem hotel={hotel} />) : 'no hotels yet'}
+      {props.hotels ? props.hotels.map(hotel => <HotelItem hotel={hotel} />) : 'no hotels yet'}
     </div>
   );
 }

@@ -8,7 +8,7 @@ function FlightSelection(props) {
     return (
       <div>
         {console.log(flights)}
-        <form className="selection">
+        <form className="selection"  onSubmit={props.handleSubmit}>
           {flights.map((flight, index) => 
             <label key={index} >
               <input type="radio"

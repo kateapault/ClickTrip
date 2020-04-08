@@ -59,12 +59,43 @@ class ViewContainer extends React.Component {
             window.sessionStorage.setItem('flights',JSON.stringify(flights))
         })
         .then(resp =>
-            window.location = ('/flight-selection')
+            window.location = '/flight-selection'
         )
     }
 
     handleFlightSubmit = (e) => {
+        e.preventDefault()
+        fetch('http://localhost:3000/search-dummy-hotels',{
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(hotels => {
+            window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
+            console.log('saved hotels!')
+        })
+        .then(resp => {
+            console.log('moving to hotels now!')
+            window.location = '/hotel-selection'
+        })
+    }
 
+    handleHotelSubmit = (e) => {
+        e.preventDefault()
+        fetch('http://localhost:3000/search-dummy-activities',{
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(activities => {
+            window.sessionStorage.setItem('activities',JSON.stringify(activities))
+        })
+        .then(resp =>
+            window.location = '/activity-selection'
+        )
+    }
+
+    handleActivitySubmit = (e) => {
+        e.preventDefault()
+        window.location = '/itinerary'
     }
 
     handleAutoSearchSubmit = () => {
@@ -78,14 +109,6 @@ class ViewContainer extends React.Component {
         //     window.sessionStorage.setItem('currentTrip',JSON.stringify(newTrip))
         //     window.sessionStorage.setItem('currentTripID',newTrip.id)
         // })
-    }
-
-    handleManualSearchSubmit = () => {
-
-    }
-
-    handleDestSearchSubmit = () => {
-
     }
 
     // callPriceFlightAPI = (params) => {
@@ -157,28 +180,28 @@ class ViewContainer extends React.Component {
             <div className="view">
                 <Switch>
                     <Route exact path="/">
-                        <AutoSearch handleClick={this.handleSearchSubmit}/>
+                        <AutoSearch handleClick={this.handleSearchSubmit} />
                     </Route>
                     <Route exact path='/destination-search'>
-                        <DestinationSearch callFlightAPI={this.callDestFlightAPI}/>
+                        <DestinationSearch handleSubmit={this.handleSearchSubmit} />
                     </Route>
                     <Route exact path='/budget-search'>
-                        <ManualSearch callFlightAPI={this.callPriceFlightAPI} />
+                        <ManualSearch handleSubmit={this.handleSearchSubmit} />
                     </Route>
                     <Route path="/flight-selection">
-                        <FlightSelection flights={this.state.flights} addFlightsToState={this.addFlightsToState}/>
+                        <FlightSelection handleSubmit={this.handleFlightSubmit} />
                     </Route>
                     <Route path="/hotel-selection">
-                        <HotelSelection hotels={this.state.hotels}/>
+                        <HotelSelection handleSubmit={this.handleHotelSubmit} />
                     </Route>
                     <Route path="/activity-selection">
-                        <ActivitySelection activities={this.state.activites} />
+                        <ActivitySelection handleSubmit={this.handleActivitySubmit} />
                     </Route>
                     <Route path="/itinerary">
                         <Itinerary />
                     </Route>
                     <Route path="/trips">
-                        <TripsContainer trips={this.state.trips}/>
+                        <TripsContainer />
                     </Route>
                     <Route path="/profile">
                         profile

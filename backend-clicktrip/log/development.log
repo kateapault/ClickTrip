@@ -3901,3 +3901,607 @@ Processing by UsersController#my_trips as */*
 Completed 200 OK in 288ms (Views: 10.6ms | ActiveRecord: 136.9ms | Allocations: 1349)
 
 
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:08:38 -0400
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (27.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (9.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 143ms (Views: 1.7ms | ActiveRecord: 79.4ms | Allocations: 20893)
+
+
+Started POST "/search-dummy-flights" for ::1 at 2020-04-08 16:08:49 -0400
+Processing by FlightsController#dummysearch as */*
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 593)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:08:49 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1367)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:08:53 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (43.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 56ms (Views: 2.4ms | ActiveRecord: 44.3ms | Allocations: 1367)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:08 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (8.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 23ms (Views: 1.5ms | ActiveRecord: 13.0ms | Allocations: 1368)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:16 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:19 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 1364)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:23 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (40.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 51ms (Views: 0.6ms | ActiveRecord: 43.3ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:25 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (5.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 7.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:26 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (112.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 122ms (Views: 2.7ms | ActiveRecord: 113.8ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:28 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (48.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (10.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 58.8ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:28 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 85ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 1350)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:32 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 17.0ms | Allocations: 1349)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:36 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:38 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:39 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (49.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 61ms (Views: 0.8ms | ActiveRecord: 56.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:43 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (123.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 129ms (Views: 0.7ms | ActiveRecord: 124.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:09:44 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (146.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 152ms (Views: 0.7ms | ActiveRecord: 147.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:16:46 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 23ms (Views: 3.3ms | ActiveRecord: 4.6ms | Allocations: 1463)
+
+
+Started POST "/search-dummy-flights" for ::1 at 2020-04-08 16:16:49 -0400
+Processing by FlightsController#dummysearch as */*
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 575)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:16:50 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (27.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (8.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 36.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:16:52 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (32.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (5.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 46ms (Views: 0.7ms | ActiveRecord: 38.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:06 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:13 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (12.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 14.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:15 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (57.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 65ms (Views: 0.5ms | ActiveRecord: 60.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:19 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:22 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:17:26 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (10.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 26ms (Views: 0.7ms | ActiveRecord: 19.9ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:15 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (63.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 69ms (Views: 0.7ms | ActiveRecord: 64.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:17 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (4.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 5.0ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:21 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:24 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (42.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (8.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 56ms (Views: 0.7ms | ActiveRecord: 50.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:25 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (8.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 12.7ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:29 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:39 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (15.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 16.7ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:40 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (45.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 51ms (Views: 1.0ms | ActiveRecord: 45.7ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:43 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (11.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 34ms (Views: 0.5ms | ActiveRecord: 30.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:45 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (16.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 40ms (Views: 0.5ms | ActiveRecord: 34.9ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:47 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (104.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (5.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 115ms (Views: 0.6ms | ActiveRecord: 110.7ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:49 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:51 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 3.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:18:54 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:19:05 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (5.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 5.8ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:19:23 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (16.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 28ms (Views: 1.0ms | ActiveRecord: 22.0ms | Allocations: 1349)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:19:47 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (4.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 5.3ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:19:52 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 4.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:19:53 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 1348)
+
+
+Started POST "/search-dummy-hotels" for ::1 at 2020-04-08 16:19:56 -0400
+Processing by HotelsController#dummysearch as */*
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 519)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:20:27 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 29ms (Views: 5.5ms | ActiveRecord: 6.4ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:20:42 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:16 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (49.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 57ms (Views: 0.8ms | ActiveRecord: 51.0ms | Allocations: 1348)
+
+
+Started POST "/search-dummy-activities" for ::1 at 2020-04-08 16:21:17 -0400
+  
+SyntaxError (/Users/kater/Development/code/ClickTrip/backend-clicktrip/app/controllers/activities_controller.rb:30: syntax error, unexpected ':', expecting end
+        activities: [
+                  ^):
+  
+app/controllers/activities_controller.rb:30: syntax error, unexpected ':', expecting end
+app/controllers/activities_controller.rb:30: syntax error, unexpected ':', expecting end
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:30 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (120.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 146ms (Views: 5.2ms | ActiveRecord: 123.2ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:32 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 9.0ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:33 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 2.5ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:37 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (6.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 17.1ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:42 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (7.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 25ms (Views: 0.7ms | ActiveRecord: 20.6ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:45 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 5.4ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:21:54 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:22:00 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 2.3ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:22:02 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (37.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (71.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 114ms (Views: 1.2ms | ActiveRecord: 108.1ms | Allocations: 1348)
+
+
+Started GET "/users/1/trips" for ::1 at 2020-04-08 16:22:03 -0400
+Processing by UsersController#my_trips as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `my_trips'
+  [1m[36mTrip Load (2.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/controllers/users_controller.rb:12:in `my_trips'
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 9.6ms | Allocations: 1348)
+
+
