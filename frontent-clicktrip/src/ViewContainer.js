@@ -54,10 +54,7 @@ class ViewContainer extends React.Component {
         })
         .then(resp => resp.json())
         .then(newTrip => {
-            console.log(newTrip.id)
-            console.log(`before setting item: ${window.sessionStorage.getItem('currentTripID')}`)
             window.sessionStorage.setItem('currentTripID',newTrip.id)
-            console.log(`after setting item: ${window.sessionStorage.getItem('currentTripID')}`)
         })
         .then(
             fetch('http://localhost:3000/search-dummy-flights',{
@@ -91,7 +88,7 @@ class ViewContainer extends React.Component {
                 arrival_time: checked.arrival_time,
                 airline: checked.airline,
                 flight_num: checked.flight_number,
-                price: checked.price,
+                ticket_price: checked.price,
                 num_stops: checked.stops,
             })
         })
@@ -123,7 +120,7 @@ class ViewContainer extends React.Component {
                 name: checked.name,
                 address: checked.address,
                 company: checked.company,
-                price: checked.price,
+                price_per_night: checked.price,
             })
         })
         .then(
@@ -145,7 +142,26 @@ class ViewContainer extends React.Component {
     handleActivitySubmit = (e) => {
         e.preventDefault()
         let activities = getCheckedCheckboxValues()
-        console.log(activities)
+        let tripID = window.sessionStorage.getItem('currentTripID')
+        for (let i=0;i<activities.length;i++) {
+            let activity = activities[i]
+            fetch('http://localhost:3000/activities',{
+                method:'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    trip_id: tripID,
+                    name: activity.name,
+                    location: activity.address,
+                    category: activity.type,
+                    ticket_price: activity.price,
+                    open_time: activity.open_time,
+                    close_time: activity.close_time,
+                })
+            })
+            .then(resp => resp.json())
+            .then(resp => console.log(resp))
+        }
+
         // window.location = '/itinerary'
     }
 

@@ -4,9 +4,9 @@ class CreateActivities < ActiveRecord::Migration[6.0]
       t.integer :trip_id
       t.float :lat
       t.float :long
-      t.string :city
+      t.string :location
       t.string :name
-      t.string :type
+      t.string :category
       t.time :open_time
       t.time :close_time
       t.float :ticket_price

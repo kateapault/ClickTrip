@@ -83,6 +83,6 @@ class ActivitiesController < ApplicationController
     private
 
     def activity_params
-        params.require(:activity).permit(:trip_id,:lat,:long,:city,:name,:type,:open_time,:close_time,:price)
+        params.require(:activity).permit(:trip_id,:lat,:long,:location,:name,:category,:open_time,:close_time,:ticket_price)
     end
 end

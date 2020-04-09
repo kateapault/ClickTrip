@@ -22,7 +22,6 @@ export function getCheckedRadioValue() {
 export function getCheckedCheckboxValues() {
     let checkboxesHTML = document.querySelectorAll('input[type="checkbox"]')
     let checkboxes = htmlCollectionToArray(checkboxesHTML)
-    console.log(`checkboxes is an array? ${Array.isArray(checkboxes)}`)
     let checked = checkboxes.filter(checkbox => checkbox.checked)
     let values = checked.map(checkbox => JSON.parse(checkbox.value))
     return values
