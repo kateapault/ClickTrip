@@ -9,7 +9,7 @@ class CreateActivities < ActiveRecord::Migration[6.0]
       t.string :type
       t.time :open_time
       t.time :close_time
-      t.float :price
+      t.float :ticket_price
 
       t.timestamps
     end

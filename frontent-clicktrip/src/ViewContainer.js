@@ -8,7 +8,7 @@ import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './Trips'
-import { getCheckedRadioValue } from './HelperMethods'
+import { getCheckedRadioValue, getCheckedCheckboxValues } from './HelperMethods'
 
 const BASEURL = 'http://localhost:3000'
 
@@ -18,8 +18,7 @@ class ViewContainer extends React.Component {
     // sessionStorage:
     //      userID          user's id
     //      trips           all user's trips
-    //      currentTrip     active trip object (as stringified JSON)
-    //      currentTripID   active trip's id
+    //      currentTripID   active trip's id (selections will be saved to this trip)
     //      flights         response from flight search
     //      hotels          response from hotel search
     //      activites       response from activity search
@@ -55,8 +54,10 @@ class ViewContainer extends React.Component {
         })
         .then(resp => resp.json())
         .then(newTrip => {
-            window.sessionStorage.setItem('currentTrip',JSON.stringify(newTrip))
+            console.log(newTrip.id)
+            console.log(`before setting item: ${window.sessionStorage.getItem('currentTripID')}`)
             window.sessionStorage.setItem('currentTripID',newTrip.id)
+            console.log(`after setting item: ${window.sessionStorage.getItem('currentTripID')}`)
         })
         .then(
             fetch('http://localhost:3000/search-dummy-flights',{
@@ -94,40 +95,57 @@ class ViewContainer extends React.Component {
                 num_stops: checked.stops,
             })
         })
-        .then(resp => resp.json())
-        .then(flight => console.log(flight))
-
-        // get hotels prior to redirect 
-        // fetch('http://localhost:3000/search-dummy-hotels',{
-        //     method: 'POST'
-        // })
-        // .then(response => response.json())
-        // .then(hotels => {
-        //     window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
-        //     console.log('saved hotels!')
-        // })
-        // .then(resp => {
-        //     console.log('moving to hotels now!')
-        //     window.location = '/hotel-selection'
-        // })
+        .then(      
+            // get hotels prior to redirect   
+            fetch('http://localhost:3000/search-dummy-hotels',{
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(hotels => {
+                window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
+            })
+            .then(resp => {
+                window.location = '/hotel-selection'
+            })
+        )
     }
 
     handleHotelSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3000/search-dummy-activities',{
-            method: 'POST'
+        // add selected hotel to trip
+        let checked = getCheckedRadioValue()
+        let tripID = window.sessionStorage.getItem('currentTripID')
+        fetch('http://localhost:3000/hotels',{
+            method:'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                trip_id: tripID,
+                name: checked.name,
+                address: checked.address,
+                company: checked.company,
+                price: checked.price,
+            })
         })
-        .then(response => response.json())
-        .then(activities => {
-            window.sessionStorage.setItem('activities',JSON.stringify(activities.activities))
-        })
-        .then(resp =>
-            window.location = '/activity-selection'
+        .then(
+            // get activities prior to redirect
+            fetch('http://localhost:3000/search-dummy-activities',{
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(activities => {
+                window.sessionStorage.setItem('activities',JSON.stringify(activities.activities))
+            })
+            .then(resp =>
+                window.location = '/activity-selection'
+            )
         )
+
     }
 
     handleActivitySubmit = (e) => {
         e.preventDefault()
+        // let activities = getCheckedCheckboxValues()
+        // console.log(activities)
         window.location = '/itinerary'
     }
 

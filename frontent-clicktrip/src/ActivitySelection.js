@@ -8,13 +8,13 @@ function ActivitySelection(props) {
 
   return (
     <div>
-      Select some activities <span role="img" aria-label="bed">🎟️</span>
+      Select some activities <span role="img" aria-label="ticket">🎟️</span>
       <form className="selection" onSubmit={props.handleSubmit}>
         {activities.map((activity, index) => 
             <label key={index} >
               <input type="checkbox"
                   name="activity-select"
-                  value={activity}
+                  value={JSON.stringify(activity)}
               />
               <ActivityItem activity={activity} />
             </label>

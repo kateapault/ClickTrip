@@ -4,12 +4,24 @@ export function jsonToArray (json) {
     return arr
 }
 
+function htmlCollectionToArray(htmlColl) {
+    let arr = []
+    for (let i=0;i<htmlColl.length;i++) {
+        arr.push(htmlColl[i])
+    }
+    return arr
+}
+
 export function getCheckedRadioValue() {
     let radiosHTML = document.querySelectorAll('input[type="radio"]')
-    let radios = []
-    for (let i=0;i<radiosHTML.length;i++) {
-        radios.push(radiosHTML[i])
-    }
+    let radios = htmlCollectionToArray(radiosHTML)
     let checked = radios.find(radio => radio.checked).value
+    return JSON.parse(checked)
+}
+
+export function getCheckedCheckboxValues() {
+    let checkboxesHTML = document.querySelectorAll('input[type="checkbox"]')
+    let checkboxes = htmlCollectionToArray(checkboxesHTML)
+    let checked = checkboxes.filter(checkbox => checkbox.checked)
     return JSON.parse(checked)
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_01_215625) do
+ActiveRecord::Schema.define(version: 2020_04_01_215303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,26 +24,7 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "type"
     t.time "open_time"
     t.time "close_time"
-    t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "activity_bookings", force: :cascade do |t|
-    t.integer "trip_id"
-    t.integer "activity_id"
-    t.integer "num_people"
-    t.date "date"
-    t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "flight_bookings", force: :cascade do |t|
-    t.integer "trip_id"
-    t.integer "flight_id"
-    t.integer "num_people"
-    t.float "price"
+    t.float "ticket_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -59,29 +40,19 @@ ActiveRecord::Schema.define(version: 2020_04_01_215625) do
     t.string "airline"
     t.string "flight_num"
     t.integer "num_stops"
-    t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "hotel_bookings", force: :cascade do |t|
-    t.integer "trip_id"
-    t.integer "hotel_id"
-    t.integer "num_people"
-    t.float "price"
-    t.date "check_in"
-    t.date "check_out"
+    t.float "ticket_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "hotels", force: :cascade do |t|
     t.integer "trip_id"
+    t.string "name"
     t.float "lat"
     t.float "long"
     t.string "address"
     t.string "company"
-    t.float "price"
+    t.float "price_per_night"
     t.date "checkin"
     t.date "checkout"
     t.datetime "created_at", precision: 6, null: false

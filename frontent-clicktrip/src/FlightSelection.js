@@ -1,6 +1,6 @@
 import React from 'react';
 import FlightItem from './FlightItem'
-import { jsonToArray, htmlCollectionToArray } from './HelperMethods'
+import { jsonToArray } from './HelperMethods'
 
 function FlightSelection(props) {
   let flights = jsonToArray(JSON.parse(window.sessionStorage.getItem('flights')))

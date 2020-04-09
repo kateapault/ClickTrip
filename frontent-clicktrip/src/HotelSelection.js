@@ -13,7 +13,7 @@ function HotelSelection(props) {
           <label key={index} >
             <input type="radio"
                 name="hotel-select"
-                value={hotel}
+                value={JSON.stringify(hotel)}
                 required
             />
             <HotelItem hotel={hotel} />

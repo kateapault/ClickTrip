@@ -11,7 +11,7 @@ class CreateFlights < ActiveRecord::Migration[6.0]
       t.string :airline
       t.string :flight_num
       t.integer :num_stops
-      t.float :price
+      t.float :ticket_price
 
       t.timestamps
     end
