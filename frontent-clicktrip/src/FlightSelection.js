@@ -1,20 +1,19 @@
 import React from 'react';
 import FlightItem from './FlightItem'
+import { jsonToArray, htmlCollectionToArray } from './HelperMethods'
 
 function FlightSelection(props) {
-  let flightsJSON = JSON.parse(window.sessionStorage.getItem('flights'))
-  let flightsKeys = Object.keys(flightsJSON)
-  let flights = flightsKeys.map(key => flightsJSON[key])
+  let flights = jsonToArray(JSON.parse(window.sessionStorage.getItem('flights')))
   return (
     <div>
-      Select a flight 🛩️
-      {console.log(flights)}
+      Select a flight <span role="img" aria-label="airplane">🛩️</span>
       <form className="selection"  onSubmit={props.handleSubmit}>
         {flights.map((flight, index) => 
           <label key={index} >
-            <input type="radio"
+            <input className="radio-button"
+                type="radio"
                 name="flight-select"
-                value={flight}
+                value={JSON.stringify(flight)}
                 required
             />
             <FlightItem flight={flight} />

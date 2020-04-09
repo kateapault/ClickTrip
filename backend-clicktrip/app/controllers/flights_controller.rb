@@ -8,10 +8,10 @@ class FlightsController < ApplicationController
         flight = Flight.new(flight_params)
 
         if flight.save
-            flash('flight added!')
+            puts 'flight added!'
             render json: flight
         else
-            flash('error! flight not added')
+            puts 'error! flight not added'
             render json: {error:flight.save.error}
         end
     end

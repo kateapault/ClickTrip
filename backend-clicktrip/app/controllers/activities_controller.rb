@@ -9,10 +9,10 @@ class ActivitiesController < ApplicationController
         activity = Activity.new(activity_params)
 
         if activity.save
-            flash('activity added!')
+            'activity added!'
             render json: activity
         else
-            flash('error! activity not added')
+            puts 'error! activity not added'
             render json: {error:activity.save.error}
         end
     end
@@ -27,7 +27,7 @@ class ActivitiesController < ApplicationController
     ##################################################################################
     
     def dummysearch
-        activities: [
+        activities = {activities: [
             {
                 name:'Museum of Emmigration',
                 location:'43 Liffy Avenue, Dublin, Ireland',
@@ -68,9 +68,9 @@ class ActivitiesController < ApplicationController
                 lat:'',
                 long:''
             }
-        ]
+        ]}
 
-        redner json: activities
+        render json: activities
     end
 
     ##################################################################################

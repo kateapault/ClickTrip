@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,Switch,Route, Redirect} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import AutoSearch from './AutoSearch';
 import DestinationSearch from './DestinationSearch';
 import ManualSearch from './ManualSearch';
@@ -8,6 +8,7 @@ import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './Trips'
+import { getCheckedRadioValue } from './HelperMethods'
 
 const BASEURL = 'http://localhost:3000'
 
@@ -40,43 +41,75 @@ class ViewContainer extends React.Component {
     componentDidMount() {
         // set user ID on load
         window.sessionStorage.setItem('userID',1)
-        
-        // set trips on load
-        fetch(`http://localhost:3000/users/${this.state.user_id}/trips`)
-        .then(resp => resp.json())
-        .then(response =>
-            window.sessionStorage.setItem('trips',JSON.stringify(response))
-        )
     }
 
     handleSearchSubmit = (e) => {
+        let userID = window.sessionStorage.getItem('userID')
         e.preventDefault()
-        fetch('http://localhost:3000/search-dummy-flights',{
-            method: 'POST'
+        fetch('http://localhost:3000/trips',{   
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                user_id: userID
+            })
         })
-        .then(response => response.json())
-        .then(flights => {
-            window.sessionStorage.setItem('flights',JSON.stringify(flights))
+        .then(resp => resp.json())
+        .then(newTrip => {
+            window.sessionStorage.setItem('currentTrip',JSON.stringify(newTrip))
+            window.sessionStorage.setItem('currentTripID',newTrip.id)
         })
-        .then(resp =>
-            window.location = '/flight-selection'
+        .then(
+            fetch('http://localhost:3000/search-dummy-flights',{
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(flights => {
+                window.sessionStorage.setItem('flights',JSON.stringify(flights))
+            })
+            .then(resp =>
+                window.location = '/flight-selection'
+            )
         )
     }
 
     handleFlightSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3000/search-dummy-hotels',{
-            method: 'POST'
+        // add selected flight to trip
+        let checked = getCheckedRadioValue()
+        let tripID = window.sessionStorage.getItem('currentTripID')
+        fetch('http://localhost:3000/flights',{
+            method:'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                trip_id: tripID,
+                departure_airport: checked.departure_airport,
+                arrival_airport: checked.arrival_airport,
+                departure_date: checked.departure_date,
+                arrival_date: checked.arrival_date,
+                departure_time: checked.departure_time,
+                arrival_time: checked.arrival_time,
+                airline: checked.airline,
+                flight_num: checked.flight_number,
+                price: checked.price,
+                num_stops: checked.stops,
+            })
         })
-        .then(response => response.json())
-        .then(hotels => {
-            window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
-            console.log('saved hotels!')
-        })
-        .then(resp => {
-            console.log('moving to hotels now!')
-            window.location = '/hotel-selection'
-        })
+        .then(resp => resp.json())
+        .then(flight => console.log(flight))
+
+        // get hotels prior to redirect 
+        // fetch('http://localhost:3000/search-dummy-hotels',{
+        //     method: 'POST'
+        // })
+        // .then(response => response.json())
+        // .then(hotels => {
+        //     window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
+        //     console.log('saved hotels!')
+        // })
+        // .then(resp => {
+        //     console.log('moving to hotels now!')
+        //     window.location = '/hotel-selection'
+        // })
     }
 
     handleHotelSubmit = (e) => {
@@ -86,7 +119,7 @@ class ViewContainer extends React.Component {
         })
         .then(response => response.json())
         .then(activities => {
-            window.sessionStorage.setItem('activities',JSON.stringify(activities))
+            window.sessionStorage.setItem('activities',JSON.stringify(activities.activities))
         })
         .then(resp =>
             window.location = '/activity-selection'

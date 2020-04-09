@@ -8,7 +8,7 @@ function ActivitySelection(props) {
 
   return (
     <div>
-      Select some activities 🎟️
+      Select some activities <span role="img" aria-label="bed">🎟️</span>
       <form className="selection" onSubmit={props.handleSubmit}>
         {activities.map((activity, index) => 
             <label key={index} >

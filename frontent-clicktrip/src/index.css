@@ -27,3 +27,20 @@ div.flight {
   width: 100%;
   border: 1px solid green;
 }
+
+div.hotel {
+  width: 100%;
+  border: 1px solid purple;
+}
+
+div.activity {
+  width: 100%;
+  border: 1px solid grey;
+}
+
+div.inactive-trip {
+  background-color: grey;
+}
+div.active-trip {
+  background-color: green;
+}

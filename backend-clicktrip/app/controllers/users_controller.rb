@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     def my_trips
         puts params
         @user = User.find(params[:user_id])
-        @trips = Trip.select{|trip| trip.user_id == @user.id}
-        render json: @trips
+        @trips = {trips: Trip.select{|trip| trip.user_id == @user.id}}
+        render json: @trips, :include => [:flights, :hotels, :activities]
     end
 
     def create

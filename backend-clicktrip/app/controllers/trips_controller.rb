@@ -5,13 +5,21 @@ class TripsController < ApplicationController
         render json: trips
     end
 
+    def show
+        trip = Trip.find(params[:id])
+        render json: trip, :include => [:flights, :hotels, :activities]
+    end
+
     def create
+        puts "create triggered!"
+        puts "trip params:"
+        puts trip_params
         trip = Trip.new(trip_params)
         if trip.save
-            flash.now[:message] = "Trip successfully created!"
+            puts "Trip successfully created!"
             render json: trip
         else 
-            flash.now[:message] = "Error: #{trip.errors.full_messages[0]}"
+            puts "Error: #{trip.errors.full_messages[0]}"
             render json: trip.errors.full_messages[0].to_json
         end
     end
@@ -28,8 +36,9 @@ class TripsController < ApplicationController
 
     private
 
-    def trip_params(params)
-        params.require(:trip).request(:user_id, :num_people, :start_date, :end_date, :origin_city_name, :origin_city_iata, :destination_city_name, :destination_city_iata, :budget)
+    def trip_params(*args)
+        params.require(:trip).permit(:user_id, :num_people, :start_date, :end_date, :origin_city_name, :origin_city_iata, :destination_city_name, :destination_city_iata, :budget)
+        # :user_id, :num_people, :start_date, :end_date, :origin_city_name, :origin_city_iata, :destination_city_name, :destination_city_iata, :budget
     end
 
 end

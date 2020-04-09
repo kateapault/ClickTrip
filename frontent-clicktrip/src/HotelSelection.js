@@ -7,7 +7,7 @@ function HotelSelection(props) {
   let hotels = hotelsKeys.map(key => hotelsJSON[key])
   return (
     <div>
-      Select a hotel 🛏️
+      Select a hotel <span role="img" aria-label="bed">🛏️</span>
       <form className="selection" onSubmit={props.handleSubmit}>
         {hotels.map((hotel, index) => 
           <label key={index} >

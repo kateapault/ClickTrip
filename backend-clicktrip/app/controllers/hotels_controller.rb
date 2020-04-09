@@ -9,10 +9,10 @@ class HotelsController < ApplicationController
         hotel = Hotel.new(hotel_params)
 
         if hotel.save
-            flash('hotel added!')
+            puts 'hotel added!'
             render json: hotel
         else
-            flash('error! hotel not added')
+            puts 'error! hotel not added'
             render json: {error:hotel.save.error}
         end
     end
