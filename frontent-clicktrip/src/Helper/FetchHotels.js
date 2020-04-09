@@ -1,4 +1,4 @@
-export function fetchHotels(callback) {  
+export function fetchHotels() {  
     // callback should be redirect to activity-selection  
     fetch('http://localhost:3000/search-dummy-hotels',{
         method: 'POST'
@@ -7,5 +7,4 @@ export function fetchHotels(callback) {
     .then(hotels => {
         window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
     })
-    callback()
 }

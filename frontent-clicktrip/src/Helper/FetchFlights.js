@@ -1,4 +1,4 @@
-export function fetchFlights(callback) {    
+export function fetchFlights() {    
     // callback is redirect
     fetch('http://localhost:3000/search-dummy-flights',{
         method: 'POST'
@@ -7,7 +7,6 @@ export function fetchFlights(callback) {
     .then(flights => {
         window.sessionStorage.setItem('flights',JSON.stringify(flights))
     })
-    callback()
 }
 
 // callPriceFlightAPI = (params) => {

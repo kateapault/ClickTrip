@@ -3,7 +3,7 @@ import FlightItem from './FlightItem'
 import { jsonToArray } from './Helper/HelperMethods'
 
 function FlightSelection(props) {
-  let flights = jsonToArray(JSON.parse(window.sessionStorage.getItem('flights')))
+  let flights = props.flights
   return (
     <div>
       Select a flight <span role="img" aria-label="airplane">🛩️</span>

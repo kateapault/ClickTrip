@@ -8,10 +8,11 @@ import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './Trips'
-import { getCheckedRadioValue, getCheckedCheckboxValues } from './Helper/HelperMethods'
+import { jsonToArray, getCheckedRadioValue, getCheckedCheckboxValues } from './Helper/HelperMethods'
 import { fetchFlights } from './Helper/FetchFlights'
 import { fetchHotels } from './Helper/FetchHotels'
 import { fetchActivities } from './Helper/FetchActivities'
+import { handleSearchSubmit } from './Helper/HandleSearchSubmit'
 
 const BASEURL = 'http://localhost:3000'
 
@@ -30,6 +31,7 @@ class ViewContainer extends React.Component {
         super(props);
         this.state = {
             viewTripID: window.sessionStorage.getItem('tripID'),
+            viewTrip:{},
         }
     }
 
@@ -41,21 +43,7 @@ class ViewContainer extends React.Component {
     handleSearchSubmit = (e) => {
         let userID = window.sessionStorage.getItem('userID')
         e.preventDefault()
-        function createNewTrip(callback) {
-            fetch('http://localhost:3000/trips',{   
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({
-                    user_id: userID
-                })
-            })
-            .then(resp => resp.json())
-            .then(newTrip => {
-                window.sessionStorage.setItem('tripID',newTrip.id)
-            })
-            callback()
-        }
-        createNewTrip(fetchFlights(function(){window.location = '/flight-selection'}))
+        handleSearchSubmit(userID)   
     }
 
     handleFlightSubmit = (e) => {
@@ -149,11 +137,20 @@ class ViewContainer extends React.Component {
             .then(resp => resp.json())
             .then(resp => console.log(resp))
         }
-
-        // window.location = '/itinerary'
+        this.routeToItinerary(tripID,function(){window.location='/itinerary'})
     }
 
-    
+    handleClickViewTrip = (e) => {
+        let tripID = e.target.parentNode.id
+        this.routeToItinerary(tripID,function(){window.location='/itinerary'})
+    }
+
+    routeToItinerary = (tripID,callback) => {
+        fetch(`http://localhost:3000/trips/${tripID}`)
+        .then(resp => resp.json())
+        .then(trip => this.setState({viewTrip:trip}))
+        callback()
+    }
 
     render() {
         return (
@@ -169,7 +166,10 @@ class ViewContainer extends React.Component {
                         <ManualSearch handleSubmit={this.handleSearchSubmit} />
                     </Route>
                     <Route path="/flight-selection">
-                        <FlightSelection handleSubmit={this.handleFlightSubmit} />
+                        <FlightSelection 
+                            handleSubmit={this.handleFlightSubmit} 
+                            flights={jsonToArray(JSON.parse(window.sessionStorage.getItem('flights')))}
+                        />
                     </Route>
                     <Route path="/hotel-selection">
                         <HotelSelection handleSubmit={this.handleHotelSubmit} />
@@ -178,7 +178,7 @@ class ViewContainer extends React.Component {
                         <ActivitySelection handleSubmit={this.handleActivitySubmit} />
                     </Route>
                     <Route path="/itinerary">
-                        <Itinerary tripID={this.state.tripID}/>
+                        <Itinerary tripID={this.state.viewTripID}/>
                     </Route>
                     <Route path="/trips">
                         <TripsContainer />
