@@ -144,9 +144,9 @@ class ViewContainer extends React.Component {
 
     handleActivitySubmit = (e) => {
         e.preventDefault()
-        // let activities = getCheckedCheckboxValues()
-        // console.log(activities)
-        window.location = '/itinerary'
+        let activities = getCheckedCheckboxValues()
+        console.log(activities)
+        // window.location = '/itinerary'
     }
 
     handleAutoSearchSubmit = () => {
