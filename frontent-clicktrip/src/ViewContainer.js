@@ -8,7 +8,10 @@ import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './Trips'
-import { getCheckedRadioValue, getCheckedCheckboxValues } from './HelperMethods'
+import { getCheckedRadioValue, getCheckedCheckboxValues } from './Helper/HelperMethods'
+import { fetchFlights } from './Helper/FetchFlights'
+import { fetchHotels } from './Helper/FetchHotels'
+import { fetchActivities } from './Helper/FetchActivities'
 
 const BASEURL = 'http://localhost:3000'
 
@@ -17,8 +20,8 @@ class ViewContainer extends React.Component {
 
     // sessionStorage:
     //      userID          user's id
+    //      tripID          id of active trip
     //      trips           all user's trips
-    //      currentTripID   active trip's id (selections will be saved to this trip)
     //      flights         response from flight search
     //      hotels          response from hotel search
     //      activites       response from activity search
@@ -26,14 +29,7 @@ class ViewContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user_id: 1,
-            flights: [],
-            hotels: [],
-            activites: [],
-            trips:[],
-            currentTrip: {},
-            currentTripID: 0,
-            currentCost: 0.0,
+            viewTripID: window.sessionStorage.getItem('tripID'),
         }
     }
 
@@ -45,29 +41,21 @@ class ViewContainer extends React.Component {
     handleSearchSubmit = (e) => {
         let userID = window.sessionStorage.getItem('userID')
         e.preventDefault()
-        fetch('http://localhost:3000/trips',{   
-            method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify({
-                user_id: userID
+        function createNewTrip(callback) {
+            fetch('http://localhost:3000/trips',{   
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: userID
+                })
             })
-        })
-        .then(resp => resp.json())
-        .then(newTrip => {
-            window.sessionStorage.setItem('currentTripID',newTrip.id)
-        })
-        .then(
-            fetch('http://localhost:3000/search-dummy-flights',{
-                method: 'POST'
+            .then(resp => resp.json())
+            .then(newTrip => {
+                window.sessionStorage.setItem('tripID',newTrip.id)
             })
-            .then(response => response.json())
-            .then(flights => {
-                window.sessionStorage.setItem('flights',JSON.stringify(flights))
-            })
-            .then(resp =>
-                window.location = '/flight-selection'
-            )
-        )
+            callback()
+        }
+        createNewTrip(fetchFlights(function(){window.location = '/flight-selection'}))
     }
 
     handleFlightSubmit = (e) => {
@@ -165,84 +153,9 @@ class ViewContainer extends React.Component {
         // window.location = '/itinerary'
     }
 
-    handleAutoSearchSubmit = () => {
-        // create blank trip
-        // fetch(BASEURL + '/trips', {
-        //     method:'POST',
-        //     header: {'ContentType':'application/json'},
-        // })
-        // .then(response => response.json())
-        // .then(newTrip => {
-        //     window.sessionStorage.setItem('currentTrip',JSON.stringify(newTrip))
-        //     window.sessionStorage.setItem('currentTripID',newTrip.id)
-        // })
-    }
-
-    // callPriceFlightAPI = (params) => {
-    //     fetch('http://localhost:3000/search-flights-price',{
-    //         method:'POST',
-    //         body: params
-    //     })
-    //     .then(resp => resp.json())
-    //     .then( flights => {
-    //         window.sessionStorage.setItem('flights',JSON.stringify(flights.data))
-    //         console.log(flights)
-    //     })
-    //     .then(resp => window.location = '/flight-selection') 
-    // }
-
-    // callDestFlightAPI = () => {
-    //     fetch('http://localhost:3000/search-flights-dest',{
-    //         method:'POST',
-    //         // body: params
-    //     })
-    //     .then(resp => resp.json())
-    //     .then( flights => {
-    //         window.sessionStorage.setItem('flights',JSON.stringify(flights.data.DUB))
-    //         console.log(flights)
-    //     })
-    //     .then(resp => window.location = '/flight-selection') 
-    // }
-
-    handleClickAutoSearchSubmit = () => {
-        // create new trip instance
-        fetch(BASEURL + '/trips', {
-            method:'POST',
-            header: {'ContentType':'application/json'},
-            body: JSON.stringify({
-                origin_city_iata: '',
-                origin_city_name: '',
-                destination_city_iata: '',
-                destination_city_name: '',
-                num_people: 1,
-                start_date: '',
-                end_date: '',
-                budget: 1200,
-            })
-        })
-        .then(resp => resp.json())
-        .then(newTrip => {
-            this.setState({
-                currentTripID: newTrip.id,
-                currentTrip: newTrip
-            })
-        })
-
-        // add info from form
-    }
-
-    handleClickManualSearchSubmit = () => {
-
-    }
-
-
-    handleClickDestSearchSubmit = () => {
-        // create new trip instance
-        // add info from form
-    }
+    
 
     render() {
-
         return (
             <div className="view">
                 <Switch>
@@ -265,7 +178,7 @@ class ViewContainer extends React.Component {
                         <ActivitySelection handleSubmit={this.handleActivitySubmit} />
                     </Route>
                     <Route path="/itinerary">
-                        <Itinerary />
+                        <Itinerary tripID={this.state.tripID}/>
                     </Route>
                     <Route path="/trips">
                         <TripsContainer />
