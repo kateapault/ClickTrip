@@ -25,11 +25,11 @@ class Itinerary extends React.Component {
   
   render() {
     let trip = this.state.trip
-    return (
-      <div>
-        {trip ?
-          <div>
-            <h2>Trip to {trip.city}</h2>
+    if (trip) {
+      return (
+        <div>
+            <h2>Trip to {trip.city}</h2> <button onClick={() => window.location='/trips'}>back to all trips</button>
+            <button>Edit Trip</button><button>Print Trip</button><button>Email Trip</button><button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button>
             <p>{trip.num_people} people | {trip.start_date} - {trip.end_date} | ${trip.budget}</p>
             <p>estimated cost: {}</p>
             <div>
@@ -51,10 +51,12 @@ class Itinerary extends React.Component {
               : 'no activities'}
             </div>
           </div>
-          : 'loading....'
-        }
-      </div>
-    );
+      )
+    } else {
+      return(
+        <div>loading....</div>
+      )
+    }
   }
 }
 

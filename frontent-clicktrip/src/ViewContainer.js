@@ -87,6 +87,13 @@ class ViewContainer extends React.Component {
         window.location = '/itinerary'
     }
 
+    deleteItinerary = (e) => {
+        let id = e.target.getAttribute('trip-id')
+        fetch(`http://localhost:3000/trips/${id}`,{
+            method: 'DELETE'
+        })
+        .then(() => window.location ='/trips')
+    }
 
     ///////////////////////////////////////////////////////////////////////////////
     /////////// RENDER VIEW ///////////////////////////////////////////////////////
@@ -118,10 +125,14 @@ class ViewContainer extends React.Component {
                         <ActivitySelection handleSubmit={this.handleActivitySubmit} />
                     </Route>
                     <Route exact path="/itinerary">
-                        <Itinerary />
+                        <Itinerary 
+                            deleteItinerary={this.deleteItinerary}
+                        />
                     </Route>
                     <Route path="/trips">
-                        <TripsContainer />
+                        <TripsContainer 
+                            deleteItinerary={this.deleteItinerary}
+                        />
                     </Route>
                     <Route path="/profile">
                         profile

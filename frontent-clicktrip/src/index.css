@@ -44,3 +44,8 @@ div.inactive-trip {
 div.active-trip {
   background-color: green;
 }
+
+div.trip-details {
+  z-index: 100;
+  background-color: grey;
+}

@@ -30,6 +30,8 @@ class TripsController < ApplicationController
     end
 
     def destroy
+        puts "PARAMSSSSSSS"
+        puts params
         trip = Trip.find(params[:id])
         trip.delete
     end
