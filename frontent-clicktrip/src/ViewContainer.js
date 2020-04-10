@@ -9,11 +9,8 @@ import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './Trips'
 import { jsonToArray, getCheckedRadioValue, getCheckedCheckboxValues } from './Helper/HelperMethods'
-import { fetchFlights } from './Helper/FetchFlights'
-import { fetchHotels } from './Helper/FetchHotels'
-import { fetchActivities } from './Helper/FetchActivities'
 import { handleSearchSubmit } from './Helper/HandleSearchSubmit'
-
+import { getFormData } from './Helper/GetFormData'
 const BASEURL = 'http://localhost:3000'
 
 class ViewContainer extends React.Component {
@@ -41,9 +38,11 @@ class ViewContainer extends React.Component {
     }
 
     handleSearchSubmit = (e) => {
-        let userID = window.sessionStorage.getItem('userID')
         e.preventDefault()
-        handleSearchSubmit(userID)   
+        let data = getFormData()
+        console.log(data)
+        let userID = window.sessionStorage.getItem('userID')
+        handleSearchSubmit(userID,data)
     }
 
     handleFlightSubmit = (e) => {
@@ -168,7 +167,7 @@ class ViewContainer extends React.Component {
                     <Route path="/flight-selection">
                         <FlightSelection 
                             handleSubmit={this.handleFlightSubmit} 
-                            flights={jsonToArray(JSON.parse(window.sessionStorage.getItem('flights')))}
+                            flights={window.sessionStorage.getItem('flights') ? jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))) : []}
                         />
                     </Route>
                     <Route path="/hotel-selection">

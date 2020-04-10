@@ -28,6 +28,8 @@ class FlightsController < ApplicationController
     ##################################################################################
 
     def dummysearch
+        puts "params:"
+        puts params
         flights = {
             a:{departure_airport: 'NYC',
             departure_date: '2020-05-11',

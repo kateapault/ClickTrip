@@ -4,7 +4,7 @@ export function jsonToArray (json) {
     return arr
 }
 
-function htmlCollectionToArray(htmlColl) {
+export function htmlCollectionToArray(htmlColl) {
     let arr = []
     for (let i=0;i<htmlColl.length;i++) {
         arr.push(htmlColl[i])
