@@ -7,10 +7,12 @@ import FlightSelection from './FlightSelection';
 import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
-import TripsContainer from './Trips'
-import { jsonToArray, getCheckedRadioValue, getCheckedCheckboxValues } from './Helper/HelperMethods'
+import TripsContainer from './TripsContainer'
+import { jsonToArray, getCheckedRadioValue, getCheckedCheckboxValues, getFormData } from './Helper/HelperMethods'
 import { handleSearchSubmit } from './Helper/HandleSearchSubmit'
-import { getFormData } from './Helper/GetFormData'
+import { handleFlightSubmit } from './Helper/HandleFlightSubmit'
+import { handleHotelSubmit } from './Helper/HandleHotelSubmit'
+import { handleActivitySubmit } from './Helper/HandleActivitySubmit'
 const BASEURL = 'http://localhost:3000'
 
 class ViewContainer extends React.Component {
@@ -19,6 +21,7 @@ class ViewContainer extends React.Component {
     // sessionStorage:
     //      userID          user's id
     //      tripID          id of active trip
+    //      activeTrip      active trip information
     //      trips           all user's trips
     //      flights         response from flight search
     //      hotels          response from hotel search
@@ -47,77 +50,22 @@ class ViewContainer extends React.Component {
 
     handleFlightSubmit = (e) => {
         e.preventDefault()
-        // add selected flight to trip
-        let checked = getCheckedRadioValue()
-        let tripID = window.sessionStorage.getItem('currentTripID')
-        fetch('http://localhost:3000/flights',{
-            method:'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify({
-                trip_id: tripID,
-                departure_airport: checked.departure_airport,
-                arrival_airport: checked.arrival_airport,
-                departure_date: checked.departure_date,
-                arrival_date: checked.arrival_date,
-                departure_time: checked.departure_time,
-                arrival_time: checked.arrival_time,
-                airline: checked.airline,
-                flight_num: checked.flight_number,
-                ticket_price: checked.price,
-                num_stops: checked.stops,
-            })
-        })
-        .then(      
-            // get hotels prior to redirect   
-            fetch('http://localhost:3000/search-dummy-hotels',{
-                method: 'POST'
-            })
-            .then(response => response.json())
-            .then(hotels => {
-                window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
-            })
-            .then(resp => {
-                window.location = '/hotel-selection'
-            })
-        )
+        let flight = getCheckedRadioValue()
+        let tripID = window.sessionStorage.getItem('tripID')
+        handleFlightSubmit(tripID,flight)
     }
 
     handleHotelSubmit = (e) => {
         e.preventDefault()
-        // add selected hotel to trip
-        let checked = getCheckedRadioValue()
-        let tripID = window.sessionStorage.getItem('currentTripID')
-        fetch('http://localhost:3000/hotels',{
-            method:'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify({
-                trip_id: tripID,
-                name: checked.name,
-                address: checked.address,
-                company: checked.company,
-                price_per_night: checked.price,
-            })
-        })
-        .then(
-            // get activities prior to redirect
-            fetch('http://localhost:3000/search-dummy-activities',{
-                method: 'POST'
-            })
-            .then(response => response.json())
-            .then(activities => {
-                window.sessionStorage.setItem('activities',JSON.stringify(activities.activities))
-            })
-            .then(resp =>
-                window.location = '/activity-selection'
-            )
-        )
-
+        let hotel = getCheckedRadioValue()
+        let tripID = window.sessionStorage.getItem('tripID')
+        handleHotelSubmit(tripID,hotel)
     }
 
     handleActivitySubmit = (e) => {
         e.preventDefault()
         let activities = getCheckedCheckboxValues()
-        let tripID = window.sessionStorage.getItem('currentTripID')
+        let tripID = window.sessionStorage.getItem('tripID')
         for (let i=0;i<activities.length;i++) {
             let activity = activities[i]
             fetch('http://localhost:3000/activities',{
@@ -136,21 +84,14 @@ class ViewContainer extends React.Component {
             .then(resp => resp.json())
             .then(resp => console.log(resp))
         }
-        this.routeToItinerary(tripID,function(){window.location='/itinerary'})
+        window.location = '/itinerary'
     }
 
-    handleClickViewTrip = (e) => {
-        let tripID = e.target.parentNode.id
-        this.routeToItinerary(tripID,function(){window.location='/itinerary'})
-    }
 
-    routeToItinerary = (tripID,callback) => {
-        fetch(`http://localhost:3000/trips/${tripID}`)
-        .then(resp => resp.json())
-        .then(trip => this.setState({viewTrip:trip}))
-        callback()
-    }
-
+    ///////////////////////////////////////////////////////////////////////////////
+    /////////// RENDER VIEW ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    
     render() {
         return (
             <div className="view">
@@ -176,8 +117,8 @@ class ViewContainer extends React.Component {
                     <Route path="/activity-selection">
                         <ActivitySelection handleSubmit={this.handleActivitySubmit} />
                     </Route>
-                    <Route path="/itinerary">
-                        <Itinerary tripID={this.state.viewTripID}/>
+                    <Route exact path="/itinerary">
+                        <Itinerary />
                     </Route>
                     <Route path="/trips">
                         <TripsContainer />

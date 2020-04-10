@@ -26,3 +26,12 @@ export function getCheckedCheckboxValues() {
     let values = checked.map(checkbox => JSON.parse(checkbox.value))
     return values
 }
+
+export function getFormData() {
+    let data = {}
+    let inputFields = htmlCollectionToArray(document.querySelectorAll('input'))
+    inputFields.map(input => {
+        data[`${input.getAttribute('name')}`] = input.value
+    })
+    return data
+}

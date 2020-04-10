@@ -12,6 +12,7 @@ function NavBar(props) {
         <Link to="/destination-search">Search By Destination </Link>
         <Link to="/budget-search"> Search By Price </Link>
         <Link to="/trips"> My Trips </Link>
+        <Link to='/itinerary'>Current Itinerary</Link>
         <Link to="/profile"> Profile </Link>
     </div>
   );

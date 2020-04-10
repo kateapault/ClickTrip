@@ -1,6 +1,5 @@
 import React from 'react';
 import Trip from './Trip'
-import { jsonToArray } from './Helper/HelperMethods'
 
 class TripsContainer extends React.Component {
   state ={

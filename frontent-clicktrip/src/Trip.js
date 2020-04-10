@@ -2,8 +2,8 @@ import React from 'react';
 
 function Trip(props) {
     let active = <div>
-        <button>edit</button>
-        <button>remove</button>
+        <button>View / Edit Trip</button>
+        <button>Delete Trip</button>
         </div>
     let inactive = <button onClick={props.activateTrip} id={props.trip.id}>make active trip</button>
 
