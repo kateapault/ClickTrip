@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 
 function NavBar(props) {
   return (
-
     <div className="nav">
-        <h1>
-            <p>ClickTrip</p>
-        </h1>
-        <Link to="/">Search </Link>
-        <Link to="/destination-search">Search By Destination </Link>
-        <Link to="/budget-search"> Search By Price </Link>
-        <Link to="/trips"> My Trips </Link>
-        <Link to='/itinerary'>Current Itinerary</Link>
-        <Link to="/profile"> Profile </Link>
+        <div className="clicktrip">ClickTrip</div>
+        <div className="links">
+          <button className="link" onClick={() => window.location ='/'}>Search</button>
+          <button className="link" onClick={() => window.location = "/destination-search"}>Search By Destination</button>
+          <button className="link" onClick={() => window.location = "/budget-search"}>Search By Price</button>
+          <button className="link" onClick={() => window.location = '/trips'}>My Trips</button>
+          <button className="link" onClick={() => window.location = '/itinerary'}>Active Itinerary</button>
+          <button className="link" onClick={() => window.location = '/profile'}>Profile</button>
+        </div>
     </div>
   );
 }

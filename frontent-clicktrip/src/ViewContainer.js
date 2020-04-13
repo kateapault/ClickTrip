@@ -14,6 +14,12 @@ import { handleFlightSubmit } from './Helper/HandleFlightSubmit'
 import { handleHotelSubmit } from './Helper/HandleHotelSubmit'
 import { handleActivitySubmit } from './Helper/HandleActivitySubmit'
 const BASEURL = 'http://localhost:3000'
+let backgroundImage = {
+    flight: 'flights-view',
+    hotels: 'hotels-view',
+    activities: 'activities-view',
+}
+
 
 class ViewContainer extends React.Component {
     // NOTE: NEED TO ADD IN CHECK TO MAKE SURE SESSION STORAGE WORKS ON USER'S MACHINE!!!
@@ -27,12 +33,14 @@ class ViewContainer extends React.Component {
     //      hotels          response from hotel search
     //      activites       response from activity search
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            viewTripID: window.sessionStorage.getItem('tripID'),
-            viewTrip:{},
-        }
+    state = {
+        bg: null,
+    }
+
+    setBackgroundImage = (string) => {
+        this.setState({
+            bg: string
+        })
     }
 
     componentDidMount() {
@@ -95,47 +103,82 @@ class ViewContainer extends React.Component {
         .then(() => window.location ='/trips')
     }
 
+    cycleSearchBackground = () => {
+        let currentSec = (new Date()).getSeconds()
+        let searchView = document.querySelector('.view')
+        console.log(searchView)
+        searchView.style.backgroundImage = `./images/searchbg${Math.floor(currentSec/10)%6}.jpg`
+    }
+
     ///////////////////////////////////////////////////////////////////////////////
     /////////// RENDER VIEW ///////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
     
     render() {
+        
         return (
-            <div className="view">
+            <div className="view-container">
                 <Switch>
                     <Route exact path="/">
-                        <AutoSearch handleClick={this.handleSearchSubmit} />
+                        <div className="auto-search-view view">
+                            <AutoSearch 
+                                handleSubmit={this.handleSearchSubmit} 
+                                cycleBackground={this.cycleSearchBackground}
+                            />
+                        </div>
                     </Route>
                     <Route exact path='/destination-search'>
-                        <DestinationSearch handleSubmit={this.handleSearchSubmit} />
+                        <div className="destination-search-view view">
+                            <DestinationSearch 
+                                handleSubmit={this.handleSearchSubmit} 
+                                cycleBackground={this.cycleSearchBackground}
+                            />
+                        </div>
                     </Route>
                     <Route exact path='/budget-search'>
-                        <ManualSearch handleSubmit={this.handleSearchSubmit} />
+                        <div className="manual-search-view view">
+                            <ManualSearch 
+                                handleSubmit={this.handleSearchSubmit} 
+                                cycleBackground={this.cycleSearchBackground}
+                            />
+                        </div>
                     </Route>
                     <Route path="/flight-selection">
+                        <div className="flights-view view">
                         <FlightSelection 
                             handleSubmit={this.handleFlightSubmit} 
                             flights={window.sessionStorage.getItem('flights') ? jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))) : []}
                         />
+                        </div>
                     </Route>
                     <Route path="/hotel-selection">
+                        <div className="hotels-view view">
                         <HotelSelection handleSubmit={this.handleHotelSubmit} />
+                        </div>
                     </Route>
                     <Route path="/activity-selection">
+                        <div className="activities-view view">
                         <ActivitySelection handleSubmit={this.handleActivitySubmit} />
+                        </div>
                     </Route>
                     <Route exact path="/itinerary">
+                        <div className="itinerary-view view">
                         <Itinerary 
                             deleteItinerary={this.deleteItinerary}
                         />
+                        </div>
                     </Route>
                     <Route path="/trips">
+                        <div className="trips-view view">
                         <TripsContainer 
                             deleteItinerary={this.deleteItinerary}
                         />
+                        </div>
                     </Route>
-                    <Route path="/profile">
+                    <Route path="/profile view">
+                        <div className="profile-view">
                         profile
+                        </div>
                     </Route>
                 </Switch>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 function ManualSearch(props) {
   return (
 
-    <div>
+    <div className="manual-search search">
       <form>
         I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
         <br></br>

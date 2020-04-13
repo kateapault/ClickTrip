@@ -7,20 +7,23 @@ function ActivitySelection(props) {
   let activities = activitiesKeys.map(key => activitiesJSON[key])
 
   return (
-    <div>
-      Select some activities <span role="img" aria-label="ticket">🎟️</span>
+    <div className="selection">
+      <p>Select some activities <span role="img" aria-label="ticket">🎟️</span></p>
       <form className="selection" onSubmit={props.handleSubmit}>
         {activities.map((activity, index) => 
-            <label key={index} >
+          <div key={index}>
               <input type="checkbox"
-                  name="activity-select"
-                  value={JSON.stringify(activity)}
+                name="activity-select"
+                id={index}
+                value={JSON.stringify(activity)}
               />
+            <label htmlFor={index} >
               <ActivityItem activity={activity} />
             </label>
+          </div>
           )}
           <br></br>
-          <button>I want these activities!</button>
+          <button>I want these activities! »</button>
       </form>
     </div>
   );

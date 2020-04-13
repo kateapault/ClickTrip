@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height:100%;
 }
 
 code {
@@ -12,31 +13,164 @@ code {
     monospace;
 }
 
-div.nav > a {
-  border: 1px solid black;
+div.App {
+  background-color: #F2F2F2;
+  height: 100vh;
+  font-family: 'Rubrik', sans-serif;
 }
 
+/* NAV BAR ////////////////////////////////////////////////////////////////////// */
+div.nav {
+  width: 100vw;
+  background-color: #478CC1;
+  color: #F2F2F2;
+  display: flex;
+  flex-flow: row ;
+  justify-content: space-between;
+}
+
+div.nav > .clicktrip {
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: 'Roboto Slab', serif;
+}
+
+div.links {
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+button.link {
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+  height: 100%;
+  font-size: medium;
+  align-content: center;
+  justify-content: center;
+  background-color: #478CC1;
+  color: #F2F2F2;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: 1px solid #464646;
+}
+
+button.link:hover {
+  background-color: #98C9E0;
+  color: #464646;
+  border-bottom: 1px solid #464646; 
+}
+
+/* VIEW CONTAINER ////////////////////////////////////////////////////////////////////// */
 div.view {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 85vw;
-  margin-left: 8vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-div.flight {
-  width: 100%;
-  border: 1px solid green;
+div.selection {
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
 }
 
+div.selection > p {
+  color: #F2F2F2;
+  font-family: 'Roboto Slab', serif;
+  align-self: center;
+}
+
+div.flights-view {
+  background-image: url(airplane-1670266_1920.jpg);
+  background-size: cover;
+}
+
+div.hotels-view {
+  background-image: url(pillows-1031079_1920.jpg);
+  background-size: cover;
+}
+
+div.activities-view {
+  background-image: url(park-4203275_1920.jpg);
+  background-size: cover;
+}
+
+/* ALL BUTTONS NOT IN NAV ////////////////////////////////////////////////////////////////////// */
+
+button {
+  background-color: #f2f2f2;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #478CC1;
+}
+
+/* ALL SEARCHES ////////////////////////////////////////////////////////////////////// */
+div.search {
+  background-color: #478CC1;
+  color: black;
+  width: 66%;
+  align-content: center;
+  height: 66%;
+}
+
+/* CONTAINERS ////////////////////////////////////////////////////////////////////// */
+
+input[type=radio] {
+  display: none;
+}
+
+input[type="radio"] + label > div {
+  background: #f2f2f2;
+  color:#464646;
+  padding: 15px;
+  border-top: 2px solid rgba(0,0,0,0.75);
+  border-bottom:2px solid rgba(0,0,0,0.75);
+}
+
+input[type=radio]:checked + label > div {
+  background-color: green;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type="checkbox"] + label > div {
+  background: #f2f2f2;
+  color:#464646;
+  padding: 15px;
+  border-top: 2px solid rgba(0,0,0,0.75);
+  border-bottom:2px solid rgba(0,0,0,0.75) ;
+}
+
+input[type="checkbox"]:hover + label > div {
+  background-color: darkgray;
+}
+
+input[type=checkbox]:checked + label > div {
+  background-color: #82BC83;
+  color: black;
+}
+
+/* FLIGHT ITEM ////////////////////////////////////////////////////////////////////// */
+
+
+/* HOTEL ITEM ////////////////////////////////////////////////////////////////////// */
 div.hotel {
   width: 100%;
   border: 1px solid purple;
 }
 
-div.activity {
-  width: 100%;
-  border: 1px solid grey;
-}
+/* ACTIVITY ITEM ////////////////////////////////////////////////////////////////////// */
+
 
 div.inactive-trip {
   background-color: grey;

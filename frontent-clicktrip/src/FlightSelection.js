@@ -5,22 +5,25 @@ import { jsonToArray } from './Helper/HelperMethods'
 function FlightSelection(props) {
   let flights = props.flights
   return (
-    <div>
+    <div className="radio">
       Select a flight <span role="img" aria-label="airplane">🛩️</span>
       <form className="selection"  onSubmit={props.handleSubmit}>
         {flights.map((flight, index) => 
-          <label key={index} >
+        <div className="selection">
             <input className="radio-button"
-                type="radio"
-                name="flight-select"
-                value={JSON.stringify(flight)}
-                required
+              type="radio"
+              name="flight-select"
+              id={index}
+              value={JSON.stringify(flight)}
+              required
             />
-            <FlightItem flight={flight} />
-          </label>
+            <label htmlFor={index} key={index} >
+              <FlightItem flight={flight} />
+            </label>
+          </div>
         )}
         <br></br>
-        <button>I want this flight!</button>
+        <button>I want this flight! »</button>
       </form>
     </div>
   );
