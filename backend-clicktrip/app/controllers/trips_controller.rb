@@ -11,10 +11,8 @@ class TripsController < ApplicationController
     end
 
     def create
-        puts "create triggered!"
-        puts "trip params:"
-        puts trip_params
         trip = Trip.new(trip_params)
+        trip.duration = (Date.strptime(trip.end_date,"%m-%d-%Y") - Date.strptime(trip.start_date,"%m-%d-%Y")).to_i
         if trip.save
             puts "Trip successfully created!"
             render json: trip

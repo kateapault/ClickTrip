@@ -56,3 +56,7 @@ export function setEdit(edit) {
 export function editBool() {
     return !!parseInt(getEdit())
 }
+
+export function sumActivityCosts(activities) {
+
+}
