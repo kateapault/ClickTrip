@@ -57,6 +57,9 @@ export function editBool() {
     return !!parseInt(getEdit())
 }
 
-export function sumActivityCosts(activities) {
-
+export function activityPriceSum() {
+    let activities = getJSON('trip').activities
+    let activityPrices = activities.map(activity => parseFloat(activity.price))
+    let priceSum = activityPrices.reduce((accumulator,value)=>accumulator + value)
+    return parseInt(priceSum).toFixed(2)
 }

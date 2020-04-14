@@ -9,6 +9,7 @@ import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
 import TripsContainer from './TripsContainer'
+import CostWidget from './CostWidget'
 import { getJSON, setJSON, jsonToArray, getCheckedRadioValue, 
         getCheckedCheckboxValues, getFormData, getEdit, setEdit, editBool } 
         from './Helper/HelperMethods'
@@ -227,18 +228,18 @@ class ViewContainer extends React.Component {
                     </Route>
                     <Route path="/flight-selection">
                         <div className="flights-view view">
-                        <FlightSelection 
-                            handleSubmit={editBool() ? 
-                                        this.handleFlightEdit 
-                                        : this.handleFlightSubmit} 
-                            flights={window.sessionStorage.getItem('flights') ? this.filterByAirports(jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))),'NYC','DUB') : []}
-                        />
-                        {console.log(`EDIT BOOL: ${editBool()}`)}
-                        {console.log(`EDIT FROM SESSION: ${getEdit()}`)}
+                            <CostWidget />
+                            <FlightSelection 
+                                handleSubmit={editBool() ? 
+                                            this.handleFlightEdit 
+                                            : this.handleFlightSubmit} 
+                                flights={window.sessionStorage.getItem('flights') ? this.filterByAirports(jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))),'NYC','DUB') : []}
+                            />
                         </div>
                     </Route>
                     <Route path="/return-flight-selection">
                         <div className="flights-view view">
+                            <CostWidget />
                             <ReturnFlightSelection 
                                 handleSubmit={editBool() ? 
                                         this.handleReturnFlightEdit 
@@ -250,6 +251,7 @@ class ViewContainer extends React.Component {
                     </Route>
                     <Route path="/hotel-selection">
                         <div className="hotels-view view">
+                            <CostWidget />
                             <HotelSelection 
                                 handleSubmit={editBool() ? 
                                         this.handleHotelEdit 
@@ -260,6 +262,7 @@ class ViewContainer extends React.Component {
                     </Route>
                     <Route path="/activity-selection">
                         <div className="activities-view view">
+                            <CostWidget />
                             <ActivitySelection 
                                 handleSubmit={editBool() ? 
                                         this.handleActivityEdit
@@ -270,6 +273,7 @@ class ViewContainer extends React.Component {
                     </Route>
                     <Route exact path="/itinerary">
                         <div className="itinerary-view view">
+                            <CostWidget />
                             <Itinerary 
                                 deleteItinerary={this.deleteItinerary}
                                 toggleEdit={this.toggleEdit}

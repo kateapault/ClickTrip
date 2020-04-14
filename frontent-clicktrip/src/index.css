@@ -77,7 +77,7 @@ button.link:hover {
 div.view {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-image: url(./images/searchbg0.jpg);
@@ -110,6 +110,70 @@ div.hotels-view {
 div.activities-view {
   background-image: url(park-4203275_1920.jpg);
   background-size: cover;
+}
+
+/* COST WIDGET ////////////////////////////////////////////////////////////////////////// */
+
+div.widget {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2;
+  color: #464646;
+  border-radius: 12%;
+  padding: 2%;
+  border: 3px solid #478CC1;
+  justify-content: space-around;
+  font-size: x-small;
+  width: 140px;
+  align-self: flex-start;
+}
+
+div.widget > div.title {
+  align-self: center;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+div.widget > div.bar {
+  width: 66%;
+  background-color: #478CC1;
+  border-radius: 4px;
+  padding: 4px;
+  align-self: center;
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+div.row > div.cost {
+  background-color: rgba(71,140,193,0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+div.cost > div {
+  align-self: center;
+}
+
+div.column {
+  padding: 4px;
+  width: 33%;
+}
+
+div.multiplier {
+  font-size: xx-small;
+  font-style: italic;
+  align-self: center;
+}
+
+div.total-row {
+  justify-content: space-around;
 }
 
 /* ALL BUTTONS NOT IN NAV ////////////////////////////////////////////////////////////////////// */
