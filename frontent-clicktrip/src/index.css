@@ -26,13 +26,20 @@ div.nav {
   color: #F2F2F2;
   display: flex;
   flex-flow: row ;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+#logo {
+  max-height:45px;
+  align-self: bottom;
 }
 
 div.nav > .clicktrip {
   font-size: xx-large;
   font-weight: bolder;
   font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: row;
 }
 
 div.links {
@@ -43,10 +50,9 @@ div.links {
 }
 
 button.link {
-  font-family: 'Roboto Slab', serif;
-  font-weight: lighter;
   height: 100%;
-  font-size: medium;
+  font-size: small;
+  font-weight: bolder;
   align-content: center;
   justify-content: center;
   background-color: #478CC1;
@@ -55,6 +61,10 @@ button.link {
   border-bottom: none;
   border-right: none;
   border-left: 1px solid #464646;
+}
+
+button.nav-end {
+  border-right: 1px solid #464646;
 }
 
 button.link:hover {
@@ -70,6 +80,7 @@ div.view {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-image: url(./images/searchbg0.jpg);
 }
 
 div.selection {
@@ -183,3 +194,23 @@ div.trip-details {
   z-index: 100;
   background-color: grey;
 }
+
+/* ITINERARY ////////////////////////////////////////////////////////// */
+
+div.itinerary {
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  height: 80%;
+}
+
+div.itinerary > p {
+  /* color: #F2F2F2; */
+  font-family: 'Roboto Slab', serif;
+  align-self: center;
+}
+
+
+/* TRIPS CONTAINER ///////////////////////////////////////////// */

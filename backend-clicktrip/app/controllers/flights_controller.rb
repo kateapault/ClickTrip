@@ -36,11 +36,11 @@ class FlightsController < ApplicationController
             departure_time: '19:22',
             arrival_airport: 'DUB',
             arrival_date:'2020-05-12',
-            arrival_time: '6:31',
+            arrival_time: '06:31',
             airline: 'AA',
             flight_number: '773',
             stops: '0',
-            price: '654.32'},
+            price: '554.32'},
 
             b:{departure_airport: 'NYC',
             departure_date: '2020-05-12',
@@ -51,7 +51,7 @@ class FlightsController < ApplicationController
             airline: 'AL',
             flight_number: '1713',
             stops: '0',
-            price: '559.32'},
+            price: '459.32'},
 
             c:{departure_airport: 'NYC',
             departure_date: '2020-05-11',
@@ -62,7 +62,40 @@ class FlightsController < ApplicationController
             airline: 'PA',
             flight_number: '34B4',
             stops: '1',
-            price: '344.22'}
+            price: '344.22'},
+
+            d:{departure_airport: 'DUB',
+            departure_date: '2020-05-20',
+            departure_time: '08:39',
+            arrival_airport: 'NYC',
+            arrival_date:'2020-05-20',
+            arrival_time: '11:47',
+            airline: 'AL',
+            flight_number: '874',
+            stops: '0',
+            price: '328.82'},
+
+            e:{departure_airport: 'DUB',
+            departure_date: '2020-05-20',
+            departure_time: '10:37',
+            arrival_airport: 'NYC',
+            arrival_date:'2020-05-20',
+            arrival_time: '13:31',
+            airline: 'AA',
+            flight_number: '290',
+            stops: '0',
+            price: '439.44'},
+
+            f:{departure_airport: 'DUB',
+            departure_date: '2020-05-20',
+            departure_time: '09:04',
+            arrival_airport: 'NYC',
+            arrival_date:'2020-05-20',
+            arrival_time: '20:08',
+            airline: 'IA',
+            flight_number: 'I978',
+            stops: '1',
+            price: '274.96'}
         }
 
         render json: flights

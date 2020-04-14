@@ -35,3 +35,24 @@ export function getFormData() {
     })
     return data
 }
+
+export function setJSON(itemName,itemData) {
+    window.sessionStorage.setItem(itemName,JSON.stringify(itemData))
+    console.log(window.sessionStorage.getItem(itemName))
+}
+
+export function getJSON(itemName) {
+    return JSON.parse(window.sessionStorage.getItem(itemName))
+}
+
+export function getEdit() {
+    return window.sessionStorage.getItem('edit')
+}
+
+export function setEdit(edit) {
+    window.sessionStorage.setItem('edit',edit)
+}
+
+export function editBool() {
+    return !!parseInt(getEdit())
+}

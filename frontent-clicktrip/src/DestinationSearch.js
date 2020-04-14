@@ -15,13 +15,15 @@ class DestinationSearch extends React.Component {
     return (
 
       <div className="destination-search search">
-        I want a vaction to <input type="text" name="origin_city_iata" placeholder="LON" />
-        <br></br>
-        for <input type="number" name="num_people" placeholder="2" /> people
-        <br></br>
-        flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
-        <br></br>
-        <button onClick={this.props.callFlightAPI}>Let's Go!</button>
+        <form onSubmit={this.props.handleSubmit}>
+          I want a vaction to <input type="text" name="origin_city_iata" placeholder="LON" />
+          <br></br>
+          for <input type="number" name="num_people" placeholder="2" /> people
+          <br></br>
+          flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
+          <br></br>
+          <button onClick={this.props.callFlightAPI}>Let's Go!</button>
+        </form>
       </div>
     );
   }

@@ -4,7 +4,7 @@ function ManualSearch(props) {
   return (
 
     <div className="manual-search search">
-      <form>
+      <form onSubmit={props.handleSubmit}>
         I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
         <br></br>
         for under $<input type="number" name="budget" placeholder="1200" />

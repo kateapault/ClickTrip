@@ -1,6 +1,7 @@
 import React from 'react';
 import Trip from './Trip'
 import TripDetails from './TripDetails';
+import Loading from './Loading'
 
 class TripsContainer extends React.Component {
   state ={
@@ -81,8 +82,8 @@ class TripsContainer extends React.Component {
       );
     } else {
       return(
-        <div>...loading</div>
-      );
+        <Loading />
+      )
     }
   }
 }

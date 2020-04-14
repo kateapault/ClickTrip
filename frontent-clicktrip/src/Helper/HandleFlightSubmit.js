@@ -16,17 +16,7 @@ export function handleFlightSubmit(tripID,flight) {
                 num_stops: flight.stops,
             })
         })
-        .then(() =>
-            // get hotels prior to redirect   
-            fetch('http://localhost:3000/search-dummy-hotels',{
-                method: 'POST'
-            })
-            .then(response => response.json())
-            .then(hotels => {
-                window.sessionStorage.setItem('hotels',JSON.stringify(hotels))
-            })
-            .then(resp => {
-                window.location = '/hotel-selection'
-            })
-        )
+        .then(() => {
+            window.location = '/return-flight-selection'
+        })
 }
