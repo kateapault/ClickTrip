@@ -46,7 +46,6 @@ div.links {
   min-height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 button.link {
@@ -114,6 +113,21 @@ div.activities-view {
 
 /* COST WIDGET ////////////////////////////////////////////////////////////////////////// */
 
+.spacer {         /* this is so the other component can be centered in the remaining space*/
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-content:top;
+  flex-basis: 80%;
+}
+
+.widget-spacer {
+  justify-self: flex-start;
+  align-self: flex-start;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
 div.widget {
   display: flex;
   flex-direction: column;
@@ -146,7 +160,7 @@ div.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1px;
+  padding: 2px;
 }
 
 div.row > div.cost {
@@ -155,6 +169,8 @@ div.row > div.cost {
   flex-direction: row;
   justify-content: space-between;
   padding: 1px;
+  height: 99%;
+  align-self: center;
 }
 
 div.cost > div {
@@ -262,6 +278,7 @@ div.trip-details {
 /* ITINERARY ////////////////////////////////////////////////////////// */
 
 div.itinerary {
+  justify-self: center;
   background: rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
@@ -278,3 +295,25 @@ div.itinerary > p {
 
 
 /* TRIPS CONTAINER ///////////////////////////////////////////// */
+.trips {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.trips > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.trips-container {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.trip {
+  width: 250px;
+}

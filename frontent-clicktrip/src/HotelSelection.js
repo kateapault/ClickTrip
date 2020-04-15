@@ -2,9 +2,7 @@ import React from 'react';
 import HotelItem from './HotelItem'
 
 function HotelSelection(props) {
-  let hotelsJSON = JSON.parse(window.sessionStorage.getItem('hotels'))
-  let hotelsKeys = Object.keys(hotelsJSON)
-  let hotels = hotelsKeys.map(key => hotelsJSON[key])
+  let hotels = props.hotels
   return (
     <div className="selection">
       <p>Select a hotel <span role="img" aria-label="bed">🛏️</span></p>

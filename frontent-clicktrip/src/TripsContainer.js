@@ -2,24 +2,31 @@ import React from 'react';
 import Trip from './Trip'
 import TripDetails from './TripDetails';
 import Loading from './Loading'
+import { getJSON, getItem, setJSON } from './Helper/HelperMethods'
 
 class TripsContainer extends React.Component {
+
   state ={
     tripID: window.sessionStorage.getItem('tripID'),
-    trips: (window.sessionStorage.getItem('trips') ? JSON.parse(window.sessionStorage.getItem('trips')) : null),
+    trips: (getItem('trips') && getItem('trips') !== "undefined" 
+          ? getJSON('trips') 
+          : null),
     tripDetail: false,
     tripDetailTrip: null,
   }
 
   componentDidMount() {
+    console.log('getting trips...')
     let userID = window.sessionStorage.getItem('userID')
     fetch(`http://localhost:3000/users/${userID}/trips`)
     .then(resp => resp.json())
     .then(trips => {
+      console.log("TRIPS")
+      console.log(trips)
       this.setState({
         trips: trips
       })
-      window.sessionStorage.setItem('trips',JSON.stringify(trips))
+      setJSON('trips',trips)
     })
   }
 
@@ -56,18 +63,20 @@ class TripsContainer extends React.Component {
 
   render() {
     if (this.state.trips) {
+      console.log(this.state.trips)
       return (
         <div className="trips">
             <h2>All Trips</h2>
-              {(this.state.tripDetail ? 
-                <TripDetails 
-                    trip={this.state.tripDetailTrip} 
-                    hideTripDetail={this.hideTripDetail}
-                    activateTrip={this.activateTrip}
-                    deleteTrip={this.deleteTrip}
-                /> 
-                : ''
-              )}
+            {(this.state.tripDetail ? 
+              <TripDetails 
+                  trip={this.state.tripDetailTrip} 
+                  hideTripDetail={this.hideTripDetail}
+                  activateTrip={this.activateTrip}
+                  deleteTrip={this.deleteTrip}
+              /> 
+              : ''
+            )}
+            <div className="trips-container">
               {
               this.state.trips.map((trip,index) => 
                 <Trip key={index} 
@@ -78,6 +87,7 @@ class TripsContainer extends React.Component {
                   deleteTrip={this.deleteTrip}
                 />
               )}
+            </div>
         </div>
       );
     } else {

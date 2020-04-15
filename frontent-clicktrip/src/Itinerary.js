@@ -62,8 +62,8 @@ class Itinerary extends React.Component {
     } else if (trip) {
       window.sessionStorage.setItem('edit',0)
       return (
-        <div>
-            <p>Trip to {trip.city}</p> <button onClick={() => window.location='/trips'}>back to all trips</button>
+        <div className="itinerary">
+            <p>Trip to {trip.city}</p> <button onClick={() => window.location='/trips'}>View All Trips</button>
             <div><button onClick={this.props.toggleEdit}>Edit Trip</button><button>Print Trip</button><button>Email Trip</button><button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button></div>
             <div><p>{trip.num_people} people | {trip.start_date} - {trip.end_date} | ${trip.budget}</p>
             <p>estimated cost: {}</p>

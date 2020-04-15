@@ -45,6 +45,10 @@ export function getJSON(itemName) {
     return JSON.parse(window.sessionStorage.getItem(itemName))
 }
 
+export function getItem(itemName) {
+    return window.sessionStorage.getItem(itemName)
+}
+
 export function getEdit() {
     return window.sessionStorage.getItem('edit')
 }

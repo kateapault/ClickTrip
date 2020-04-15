@@ -1,6 +1,6 @@
 {
   "short_name": "ClickTrip",
-  "name": "ClickTrip",
+  "name": "Front-end UI for ClickTrip",
   "icons": [
     {
       "src": "favicon.ico",

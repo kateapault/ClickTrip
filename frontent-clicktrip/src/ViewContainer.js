@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import AutoSearch from './AutoSearch';
 import DestinationSearch from './DestinationSearch';
 import ManualSearch from './ManualSearch';
@@ -18,6 +18,7 @@ import { handleFlightSubmit } from './Helper/HandleFlightSubmit'
 import { handleReturnFlightSubmit } from './Helper/HandleReturnFlightSubmit'
 import { handleHotelSubmit } from './Helper/HandleHotelSubmit'
 import { handleActivitySubmit } from './Helper/HandleActivitySubmit'
+
 const BASEURL = 'http://localhost:3000'
 
 class ViewContainer extends React.Component {
@@ -35,19 +36,20 @@ class ViewContainer extends React.Component {
     //      edit            boolean; whether edit mode is on (1) or off (0)
 
     state = {
-        bg: null,
+        userID: 1,
+        tripID: null,
+        activeTrip: null,
+        trips: [],
+        flights: [],
+        returnFlights: [],
+        hotels: [],
+        activities: [],
         edit: null,
-    }
-
-    setBackgroundImage = (string) => {
-        this.setState({
-            bg: string
-        })
+        view: 'autoSearch'
     }
 
     componentDidMount() {
-        // set user ID on load
-        window.sessionStorage.setItem('userID',1)
+
     }
 
     /// SUBMIT HANDLING ///////////////////////////////////////////////////////////
@@ -274,6 +276,7 @@ class ViewContainer extends React.Component {
                     <Route exact path="/itinerary">
                         <div className="itinerary-view view">
                             <CostWidget />
+                            <div className="spacer" />
                             <Itinerary 
                                 deleteItinerary={this.deleteItinerary}
                                 toggleEdit={this.toggleEdit}
