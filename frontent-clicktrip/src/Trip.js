@@ -12,8 +12,8 @@ function Trip(props) {
             </div>
     // console.log(props.trip)
     return (
-        <div className={props.trip.id == props.tripID ? "active-trip" : "inactive-trip"}>
-            <h3>My {props.trip.city} Trip, ID: {props.trip.id}</h3> {props.trip.id == props.tripID ? active : inactive}
+        <div className={props.trip.id == props.tripID ? "active-trip trip" : "inactive-trip trip"}>
+            <h3>My {props.trip.destination_city_name} Trip</h3> {props.trip.id == props.tripID ? active : inactive}
             <div>Flight: {props.trip.flights.length > 0 ? props.trip.flights[0].departure_time : 'none'} </div>
             <div>Hotel: {props.trip.hotels.length > 0 ? props.trip.hotels[0].name : 'none'}</div>
             <div>Activity 1: {props.trip.activities.length > 0 ? props.trip.activities[0].name : 'none'}</div>

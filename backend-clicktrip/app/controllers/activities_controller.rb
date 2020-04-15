@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
     def dummysearch
         activities = {activities: [
             {
-                name:'Museum of Emmigration',
+                name:'Museum of Emigration',
                 location:'43 Liffy Avenue, Dublin, Ireland',
                 type:'museum',
                 open_time: '10:00',
@@ -60,13 +60,16 @@ class ActivitiesController < ApplicationController
             },
             {
                 name:'Haunted Dublin',
-                location:'2 Main St, Dublin, Ireland',
+                location:'2 Castle St, Dublin, Ireland',
                 type:'tour',
                 open_time: '18:00',
                 close_time: '22:00',
                 price: '45.00',
                 lat:'',
                 long:''
+            },
+            {
+                
             }
         ]}
 

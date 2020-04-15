@@ -13,6 +13,7 @@ import { getJSON, setJSON, jsonToArray, getCheckedRadioValue,
         getCheckedCheckboxValues, getFormData, getEdit, setEdit, editBool } 
         from './Helper/HelperMethods'
 import { handleSearchSubmit } from './Helper/HandleSearchSubmit'
+import { handleAutoSearchSubmit } from './Helper/HandleAutoSearchSubmit'
 import { handleFlightSubmit } from './Helper/HandleFlightSubmit'
 import { handleReturnFlightSubmit } from './Helper/HandleReturnFlightSubmit'
 import { handleHotelSubmit } from './Helper/HandleHotelSubmit'
@@ -60,6 +61,16 @@ class ViewContainer extends React.Component {
         console.log(data)
         let userID = window.sessionStorage.getItem('userID')
         handleSearchSubmit(userID,data)
+    }
+
+    handleAutoSearchSubmit = (e) => {
+        e.preventDefault()
+        this.setState({
+            edit:false,
+        })
+        let data = getFormData()
+        let userID = window.sessionStorage.getItem('userID')
+        handleAutoSearchSubmit(userID,data)
     }
 
     handleFlightSubmit = (e) => {
@@ -192,6 +203,13 @@ class ViewContainer extends React.Component {
         return myFlights
     }
 
+    filterByAirport = (flights, origin) => {
+        let myFlights = flights.filter(flight => 
+            (flight.departure_airport === origin)
+        )
+        return myFlights
+    }
+
     ///////////////////////////////////////////////////////////////////////////////
     /////////// RENDER VIEW ///////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
@@ -204,7 +222,7 @@ class ViewContainer extends React.Component {
                     <Route exact path="/">
                         <div className="auto-search-view view">
                             <AutoSearch 
-                                handleSubmit={this.handleSearchSubmit} 
+                                handleSubmit={this.handleAutoSearchSubmit} 
                                 cycleBackground={this.cycleSearchBackground}
                             />
                         </div>
@@ -231,7 +249,7 @@ class ViewContainer extends React.Component {
                             handleSubmit={editBool() ? 
                                         this.handleFlightEdit 
                                         : this.handleFlightSubmit} 
-                            flights={window.sessionStorage.getItem('flights') ? this.filterByAirports(jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))),'NYC','DUB') : []}
+                            flights={window.sessionStorage.getItem('flights') ? this.filterByAirport(jsonToArray(JSON.parse(window.sessionStorage.getItem('flights'))),'NYC') : []}
                         />
                         {console.log(`EDIT BOOL: ${editBool()}`)}
                         {console.log(`EDIT FROM SESSION: ${getEdit()}`)}

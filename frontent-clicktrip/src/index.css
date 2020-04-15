@@ -204,6 +204,8 @@ div.itinerary {
   align-content: center;
   justify-content: space-around;
   height: 80%;
+  width: 80%;
+  color: #f2f2f2;
 }
 
 div.itinerary > p {
@@ -214,3 +216,21 @@ div.itinerary > p {
 
 
 /* TRIPS CONTAINER ///////////////////////////////////////////// */
+
+.trips {
+  display:flex;
+  height: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.trips > h2 {
+  width: 100%;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.trip {
+  width: 250px;
+}
