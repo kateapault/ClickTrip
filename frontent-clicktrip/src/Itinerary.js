@@ -2,7 +2,7 @@ import React from 'react';
 import FlightItem from './FlightItem'
 import HotelItem from './HotelItem'
 import ActivityItem from './ActivityItem'
-import { editBool } from './Helper/HelperMethods'
+import { editBool, getEdit } from './Helper/HelperMethods'
 
 class Itinerary extends React.Component {
   state = {
@@ -29,45 +29,18 @@ class Itinerary extends React.Component {
   
   render() {
     let trip = this.state.trip
-    if (trip && (this.props.edit || editBool())) {
-      return(
-        <div className="itinerary">
-        <p>Trip to {trip.destination_city_name}</p>
-        <div><button onClick={this.props.toggleEdit}>Save Changes To Trip</button></div>
-        <div><p>{trip.num_people} people | {trip.start_date} - {trip.end_date} | ${trip.budget}</p>
-        <p>estimated cost: {}</p>
-        </div>
-        <div>
-          <p>Flights</p>
-          {trip.flights && trip.flights.length > 0 ? 
-          <div>
-            <button onClick={()=>window.location="/flight-selection"}>Change Departing Flight</button> Depart: <FlightItem key={trip.flights[0].id} flight={trip.flights[0]}/>
-            <button onClick={()=>window.location="/return-flight-selection"}>Change Return Flight</button> Return: <FlightItem key={trip.flights[1].id} flight={trip.flights[1]}/>
-          </div>
-          : 'no flights'}
-        </div>
-        <div>
-          <p>Hotel</p>
-          <button onClick={() => window.location='/hotel-selection'}>Change Hotel</button>
-          {trip.hotels && trip.hotels.length > 0 ?
-          <HotelItem hotel={trip.hotels[0]} />
-          : 'no hotels'}
-        </div>
-        <div>
-          <p>Activities</p>
-          <button onClick={()=>window.location="/activity-selection"}>Reselect Activities</button>
-          {trip.activities && trip.activities.length > 0 ?
-          trip.activities.map(activity => <ActivityItem key={activity.id} activity={activity} />)
-          : 'no activities'}
-        </div>
-      </div>
-      )
-    } else if (trip) {
-      window.sessionStorage.setItem('edit',0)
+    if (trip) {
       return (
         <div className="itinerary">
             <div className="itinerary-title"><div>Trip to {trip.destination_city_name}</div> <button onClick={() => window.location='/trips'}>View All Trips</button></div>
-            <div className="itinerary-buttons"><button onClick={this.props.toggleEdit}>Edit Trip</button><button>Print Trip</button><button>Email Trip</button><button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button></div>
+            {(this.props.edit || editBool()) ? 
+              <button onClick={this.props.toggleEdit}>Save Changes To Trip</button>
+            : <div className="itinerary-buttons">
+                <button onClick={this.props.toggleEdit}>Edit Trip</button>
+                <button>Print Trip</button>
+                <button>Email Trip</button>
+                <button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button>
+              </div>}
             <div className="itinerary-info">
               <div>{trip.num_people} people</div>
               <div>{trip.start_date} - {trip.end_date}</div>
@@ -75,22 +48,34 @@ class Itinerary extends React.Component {
               <div className="last">estimated cost: {}</div>
             </div>
             <div className="itinerary-bookings">
-                {trip.flights && trip.flights.length > 0 ? 
+              {trip.flights && trip.flights.length > 0 ? 
               <div className="itinerary-col">
                 <p>Flights</p>
+                {this.state.edit || editBool(getEdit()) ? 
+                  <button className="change" onClick={()=>window.location="/flight-selection"}>Change Flight</button>
+                  :null}
                 <FlightItem key={trip.flights[0].id} flight={trip.flights[0]} direction="depart"/>
+                {this.state.edit || editBool(getEdit()) ? 
+                  <button className="change" onClick={()=>window.location="/return-flight-selection"}>Change Flight</button>
+                  :null}
                 <FlightItem key={trip.flights[1].id} flight={trip.flights[1]} direction="return"/>
               </div>
               : null}
               {trip.hotels && trip.hotels.length > 0 ?
               <div className="itinerary-col">
                 <p>Hotel</p>
-                {trip.hotels.map(hotel => <HotelItem key={hotel.id} hotel={hotel} />)}
+                {this.state.edit || editBool(getEdit()) ? 
+                  <button onClick={() => window.location='/hotel-selection'}>Change Hotel</button> 
+                  : null}
+                <HotelItem key={trip.hotels[0].id} hotel={trip.hotels[0]} />
               </div>              
               : null}
               {trip.activities && trip.activities.length > 0 ?
               <div className="itinerary-col">
                 <p>Activities</p>
+                {this.state.edit || editBool(getEdit()) ? 
+                  <button className="change" onClick={()=>window.location="/activity-selection"}>Reselect Activities</button>
+                : null}
                 {trip.activities.map(activity => <ActivityItem key={activity.id} activity={activity} />)}
               </div>
               : null}

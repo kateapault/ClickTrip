@@ -280,6 +280,7 @@ div.itinerary-col {
 
 div.itinerary-col > p {
   font-size: large;
+  align-self: center;
 }
 
 /* TRIPS CONTAINER ///////////////////////////////////////////// */
