@@ -146,7 +146,7 @@ form.search {
   align-content: center;
 }
 
-form.search > .form-input {
+form.search > div {
   margin-left: 20%;
 }
 
