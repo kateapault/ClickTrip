@@ -128,12 +128,26 @@ div.search {
   background-color: #478CC1;
   color: black;
   width: 66%;
-  align-content: center;
   height: 66%;
+  border-radius: 20px;
+}
+
+div.search > h3 {
+  width: 100%;
+  text-align: center;
+}
+
+form.search {
+  width: 100%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+}
+
+form.search > .form-input {
+  margin-left: 20%;
 }
 
 /* CONTAINERS ////////////////////////////////////////////////////////////////////// */

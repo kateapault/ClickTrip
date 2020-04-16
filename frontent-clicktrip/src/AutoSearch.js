@@ -20,14 +20,16 @@ class AutoSearch extends React.Component {
     render() {
         return (
             <div className="auto-search search">
-                <form onSubmit={this.props.handleSubmit} className="search">
-                    <div>I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
+                <h3>Instant Trip</h3>
+                <form className="auto-search search" onSubmit={this.props.handleSubmit} className="search">
+                    <div></div>
+                    <div className="form-input">I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
                     </div>
-                    <div>for under $<input type="number" name="budget" placeholder="1200" />
+                    <div className="form-input">for under $<input type="number" name="budget" placeholder="1200" />
                     </div>
-                    <div>from <input type="date" name="start_date" /> to <input type="date" name="end_date" />
+                    <div className="form-input">from <input type="date" name="start_date" /> to <input type="date" name="end_date" />
                     </div>
-                    <div>flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
+                    <div className="form-input">flying out of <input type="text" name="origin_city_iata" placeholder="NYC" />
                     </div>
                     <button>Take me away!</button>
                 </form>
