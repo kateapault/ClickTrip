@@ -1,15 +1,23 @@
 import React from 'react';
 import FlightItem from './FlightItem'
-import { jsonToArray } from './Helper/HelperMethods'
+import { getJSON, editBool } from './Helper/HelperMethods'
 
 function ReturnFlightSelection(props) {
   let flights = props.flights
-  return (
-    <div className="radio">
-      Select a flight <span role="img" aria-label="airplane">🛩️</span>
-      <form className="selection"  onSubmit={props.handleSubmit}>
+  let edit = editBool()
+  let currentFlight
+  if (edit) {
+    getJSON('trip').flights[1] ? currentFlight = getJSON('trip').flights[1] : console.log('ERROR: NO CURRENT FLIGHT FOUND')
+  }
+  return(
+    <div className="selection">
+      <div>{edit ? "Reselect Flight" : "Select a flight"} <span role='img' aria-label="airplane">🛩️</span></div>
+      <form onSubmit={props.handleSubmit}>
         {flights.map((flight, index) => 
-        <div className="selection">
+        <div key={index} className={
+            currentFlight && currentFlight.id == flight.id ? 
+            'current' 
+            : ''}>
             <input className="radio-button"
               type="radio"
               name="flight-select"
@@ -23,7 +31,7 @@ function ReturnFlightSelection(props) {
           </div>
         )}
         <br></br>
-        <button>I want this flight! »</button>
+        <button>{edit ? "I want this flight instead!" : "I want this flight!"}</button>
       </form>
     </div>
   );

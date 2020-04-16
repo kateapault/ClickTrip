@@ -83,20 +83,6 @@ div.view {
   background-image: url(./images/searchbg0.jpg);
 }
 
-div.selection {
-  background: rgba(0,0,0,0.75);
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-around;
-}
-
-div.selection > p {
-  color: #F2F2F2;
-  font-family: 'Roboto Slab', serif;
-  align-self: center;
-}
-
 div.flights-view {
   background-image: url(airplane-1670266_1920.jpg);
   background-size: cover;
@@ -127,7 +113,7 @@ button:hover {
 div.search {
   background-color: #478CC1;
   color: black;
-  width: 66%;
+  width: 50%;
   height: 66%;
   border-radius: 20px;
 }
@@ -150,7 +136,32 @@ form.search > div {
   margin-left: 20%;
 }
 
-/* CONTAINERS ////////////////////////////////////////////////////////////////////// */
+/* SELECTIONS ////////////////////////////////////////////////////////////////////// */
+div.selection {
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+
+div.selection > div {
+  color: #F2F2F2;
+  margin: 20px;
+  font-size: large;
+  text-align: center;
+}
+
+div.selection > form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+div.selection > form > button {
+  align-self: center;
+}
 
 input[type=radio] {
   display: none;
@@ -165,7 +176,8 @@ input[type="radio"] + label > div {
 }
 
 input[type=radio]:checked + label > div {
-  background-color: green;
+  background-color: #478CC1;
+  color: #f2f2f2;
 }
 
 input[type=checkbox] {
@@ -193,20 +205,9 @@ input[type=checkbox]:checked + label > div {
 
 
 /* HOTEL ITEM ////////////////////////////////////////////////////////////////////// */
-div.hotel {
-  width: 100%;
-  border: 1px solid purple;
-}
+
 
 /* ACTIVITY ITEM ////////////////////////////////////////////////////////////////////// */
-
-
-div.inactive-trip {
-  background-color: grey;
-}
-div.active-trip {
-  background-color: green;
-}
 
 div.trip-details {
   z-index: 100;
@@ -304,7 +305,7 @@ div.itinerary-col > p {
   height: 100%;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-content: center;
+  align-content: flex-start;
 }
 
 .trips > h2 {
@@ -315,4 +316,19 @@ div.itinerary-col > p {
 
 .trip {
   width: 250px;
+  margin-top: 15px;
+  color: #f2f2f2;
+  border-radius: 15px;
+}
+
+div.inactive-trip {
+  background-color: rgba(0,0,0,0.8);
+  padding: 3px;
+  padding-left: 6px;
+}
+
+div.active-trip {
+  background-color: green;
+  color: black;
+  padding-left: 3px;
 }

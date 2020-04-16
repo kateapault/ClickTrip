@@ -60,6 +60,7 @@ class ViewContainer extends React.Component {
         let data = getFormData()
         console.log(data)
         let userID = window.sessionStorage.getItem('userID')
+        data.destination_city_name = "Dublin"
         handleSearchSubmit(userID,data)
     }
 
