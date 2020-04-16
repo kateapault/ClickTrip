@@ -91,22 +91,22 @@ class ViewContainer extends React.Component {
         })
         .then(resp => resp.json())
         .then(response => {
-            console.log(response)
+            console.log(response.Places[0].PlaceId)
             window.sessionStorage.setItem('destCode',response.Places[0].PlaceId)
-            data.destination = response.Places[0].PlacesId
+            data.destination = response.Places[0].PlaceId
+            fetch(`${BASEURL}/search-flights-destination`,{
+                method: "POST",
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    destination: response.Places[0].PlaceId
+                })
+            })
+            .then(resp => resp.json())
+            .then(initial => {
+                console.log(initial)
+                window.sessionStorage.setItem('initial',JSON.stringify(initial))
+            })
         })
-        // .then(resp => {
-            // fetch(`${BASEURL}/search-flights-destination`,{
-            //     method: "POST",
-            //     headers: { 'Content-type': 'application/json' },
-            //     body: JSON.stringify(data.destination)
-            // })
-            // .then(resp => resp.json())
-            // .then(monthArray => {
-            //     console.log(monthArray)
-            //     window.sessionStorage.setItem('monthArray',JSON.parse(monthArray))
-            // })
-        // })
     }
 
     handleFlightSubmit = (e) => {

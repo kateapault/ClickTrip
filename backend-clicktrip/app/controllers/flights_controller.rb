@@ -143,7 +143,7 @@ class FlightsController < ApplicationController
         
         request = Net::HTTP::Get.new(url)
         request["x-rapidapi-host"] = 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com'
-        request["x-rapidapi-key"] = '5524d16cc4mshc2e4a73acd97371p10fba3jsnd0c3d89e3170'
+        request["x-rapidapi-key"] = ENV["SKYSCANNER_KEY"]
         
         response = http.request(request)
         puts response.read_body
@@ -169,12 +169,43 @@ class FlightsController < ApplicationController
     def search_destination
         origin = 'NYCA-sky'
         destination = params[:destination]
-        
+        months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+        current_month = Time.new.to_s.split('-')[1]
+        ind = months.find_index(current_month)
+        current_year = Time.new.to_s.split('-')[0]
+        next_year = (current_year.to_i + 1).to_s
+        years = [current_year] * months[ind..].length + [next_year] * months[0...ind].length
+        next_twelve_months = months[ind..] + months[0...ind]
+        require 'uri'
+        require 'net/http'
+        require 'openssl'
+        months_prices_array = []
+        for i in 0...12 do 
+            month = next_twelve_months[i]
+            year = years[i]
+            url = URI("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/#{destination}/#{origin}/#{year}-#{month}?inboundpartialdate=#{year}-#{month}")
 
-        response = HTTParty.get("http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=#{origin}&destination=#{destination}&token=#{ENV['TRAVELPAYOUTS_KEY']}")
+            http = Net::HTTP.new(url.host, url.port)
+            http.use_ssl = true
+            http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+            request = Net::HTTP::Get.new(url)
+            request["x-rapidapi-host"] = 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com'
+            request["x-rapidapi-key"] = ENV["SKYSCANNER_KEY"]
+
+            response = http.request(request)
+            puts response.read_body
+            months_prices_array << response.read_body
+        end
+        puts months_prices_array
+        render json: months_prices_array
+
+
+
+        # response = HTTParty.get("http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=#{origin}&destination=#{destination}&token=#{ENV['TRAVELPAYOUTS_KEY']}")
         # response = HTTParty.get("http://api.travelpayouts.com/v1/prices/cheap?origin=#{origin}&destination=#{destination}&currency=usd&token=#{ENV['TRAVELPAYOUTS_KEY']}")
-        puts response.body
-        render json: response.body
+        # puts response.body
+        # render json: response.body
     end
 
     private
