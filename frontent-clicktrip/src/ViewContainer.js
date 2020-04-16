@@ -8,10 +8,11 @@ import ReturnFlightSelection from './ReturnFlightSelection';
 import HotelSelection from './HotelSelection';
 import ActivitySelection from './ActivitySelection';
 import Itinerary from './Itinerary';
-import TripsContainer from './TripsContainer'
+import TripsContainer from './TripsContainer';
+import PriceCalendar from './PriceCalendar';
 import { getJSON, setJSON, jsonToArray, getCheckedRadioValue, 
         getCheckedCheckboxValues, getFormData, getEdit, setEdit, editBool } 
-        from './Helper/HelperMethods'
+        from './Helper/HelperMethods';
 import { handleSearchSubmit } from './Helper/HandleSearchSubmit'
 import { handleAutoSearchSubmit } from './Helper/HandleAutoSearchSubmit'
 import { handleFlightSubmit } from './Helper/HandleFlightSubmit'
@@ -103,9 +104,9 @@ class ViewContainer extends React.Component {
             })
             .then(resp => resp.json())
             .then(initial => {
-                console.log(initial)
                 window.sessionStorage.setItem('initial',JSON.stringify(initial))
             })
+            .then(() => window.location = '/price-calendar')
         })
     }
 
@@ -269,6 +270,11 @@ class ViewContainer extends React.Component {
                                 handleSubmit={this.handleDestinationSearchSubmit} 
                                 cycleBackground={this.cycleSearchBackground}
                             />
+                        </div>
+                    </Route>
+                    <Route>
+                        <div className="price-calendar-view view">
+                            <PriceCalendar />
                         </div>
                     </Route>
                     <Route exact path='/budget-search'>

@@ -179,10 +179,11 @@ class FlightsController < ApplicationController
         require 'uri'
         require 'net/http'
         require 'openssl'
-        months_prices_array = []
+        months_prices_array = [[]]
         for i in 0...12 do 
             month = next_twelve_months[i]
             year = years[i]
+            months_prices_array[0] << month
             url = URI("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/#{destination}/#{origin}/#{year}-#{month}?inboundpartialdate=#{year}-#{month}")
 
             http = Net::HTTP.new(url.host, url.port)
