@@ -130,6 +130,10 @@ div.search {
   width: 66%;
   align-content: center;
   height: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
 }
 
 /* CONTAINERS ////////////////////////////////////////////////////////////////////// */
@@ -203,17 +207,80 @@ div.itinerary {
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
-  height: 80%;
-  width: 80%;
+  min-height: 66%;
   color: #f2f2f2;
+  max-width: 95%;
 }
 
-div.itinerary > p {
+div.itinerary-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div.itinerary-title > div {
   /* color: #F2F2F2; */
   font-family: 'Roboto Slab', serif;
   align-self: center;
+  font-size: x-large;
+  margin-left: auto;
+  width:100%;
+  text-align: center;
 }
 
+div.itinerary-title > button {
+  margin-left: auto;
+  background-color: rgba(0,0,0,0);
+  color: #F2F2F2;
+  height: 100%;
+  font-weight: bold;
+}
+div.itinerary-title > button:hover {
+  margin-left: auto;
+  background-color: #f2f2f2;
+  color: #464646;
+  height: 100%;
+}
+
+div.itinerary-buttons {
+  display:flex;
+  justify-content: center;
+}
+
+div.itinerary-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.itinerary-info > div {
+  padding: 10px;
+  border-right: 1px solid #f2f2f2;
+}
+
+div.itinerary-info > div.last {
+  border-right: none;
+}
+
+div.itinerary-bookings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div.itinerary-col {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.itinerary-col > p {
+  font-size: large;
+}
 
 /* TRIPS CONTAINER ///////////////////////////////////////////// */
 

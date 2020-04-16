@@ -31,7 +31,7 @@ class Itinerary extends React.Component {
     let trip = this.state.trip
     if (trip && (this.props.edit || editBool())) {
       return(
-        <div>
+        <div className="itinerary">
         <p>Trip to {trip.destination_city_name}</p>
         <div><button onClick={this.props.toggleEdit}>Save Changes To Trip</button></div>
         <div><p>{trip.num_people} people | {trip.start_date} - {trip.end_date} | ${trip.budget}</p>
@@ -66,33 +66,36 @@ class Itinerary extends React.Component {
       window.sessionStorage.setItem('edit',0)
       return (
         <div className="itinerary">
-            <p>Trip to {trip.destination_city_name}</p> <button onClick={() => window.location='/trips'}>back to all trips</button>
-            <div><button onClick={this.props.toggleEdit}>Edit Trip</button><button>Print Trip</button><button>Email Trip</button><button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button></div>
-            <div><p>{trip.num_people} people | {trip.start_date} - {trip.end_date} | ${trip.budget}</p>
-            <p>estimated cost: {}</p>
+            <div className="itinerary-title"><div>Trip to {trip.destination_city_name}</div> <button onClick={() => window.location='/trips'}>View All Trips</button></div>
+            <div className="itinerary-buttons"><button onClick={this.props.toggleEdit}>Edit Trip</button><button>Print Trip</button><button>Email Trip</button><button trip-id={trip.id} onClick={this.props.deleteItinerary}>Delete Trip</button></div>
+            <div className="itinerary-info">
+              <div>{trip.num_people} people</div>
+              <div>{trip.start_date} - {trip.end_date}</div>
+              <div>Budget: ${trip.budget}</div>
+              <div className="last">estimated cost: {}</div>
             </div>
-            <div>
-              <p>Flights</p>
-              {trip.flights && trip.flights.length > 0 ? 
-              <div>
-                Depart: <FlightItem key={trip.flights[0].id} flight={trip.flights[0]}/>
-                Return: <FlightItem key={trip.flights[1].id} flight={trip.flights[1]}/>
+            <div className="itinerary-bookings">
+                {trip.flights && trip.flights.length > 0 ? 
+              <div className="itinerary-col">
+                <p>Flights</p>
+                <FlightItem key={trip.flights[0].id} flight={trip.flights[0]} direction="depart"/>
+                <FlightItem key={trip.flights[1].id} flight={trip.flights[1]} direction="return"/>
               </div>
-              : 'no flights'}
-            </div>
-            <div>
-              <p>Hotel</p>
+              : null}
               {trip.hotels && trip.hotels.length > 0 ?
-              trip.hotels.map(hotel => <HotelItem key={hotel.id} hotel={hotel} />)
-              : 'no hotels'}
-            </div>
-            <div>
-              <p>Activities</p>
+              <div className="itinerary-col">
+                <p>Hotel</p>
+                {trip.hotels.map(hotel => <HotelItem key={hotel.id} hotel={hotel} />)}
+              </div>              
+              : null}
               {trip.activities && trip.activities.length > 0 ?
-              trip.activities.map(activity => <ActivityItem key={activity.id} activity={activity} />)
-              : 'no activities'}
-            </div>
+              <div className="itinerary-col">
+                <p>Activities</p>
+                {trip.activities.map(activity => <ActivityItem key={activity.id} activity={activity} />)}
+              </div>
+              : null}
           </div>
+        </div>
       )
     } else {
       return(
