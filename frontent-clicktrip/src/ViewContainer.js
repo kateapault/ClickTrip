@@ -60,7 +60,6 @@ class ViewContainer extends React.Component {
         let data = getFormData()
         console.log(data)
         let userID = window.sessionStorage.getItem('userID')
-        data.destination_city_name = "Dublin"
         handleSearchSubmit(userID,data)
     }
 
@@ -83,7 +82,7 @@ class ViewContainer extends React.Component {
 
     handleReturnFlightSubmit = (e) => {
         e.preventDefault()
-        let flight = getCheckedRadioValue
+        let flight = getCheckedRadioValue()
         let tripID = window.sessionStorage.getItem('tripID')
         handleReturnFlightSubmit(tripID,flight)
     }

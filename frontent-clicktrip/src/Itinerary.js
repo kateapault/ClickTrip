@@ -3,10 +3,11 @@ import FlightItem from './FlightItem'
 import HotelItem from './HotelItem'
 import ActivityItem from './ActivityItem'
 import { editBool, getEdit } from './Helper/HelperMethods'
+import Loading from './Loading'
 
 class Itinerary extends React.Component {
   state = {
-    trip: (window.sessionStorage.getItem('trip') ? JSON.parse(window.sessionStorage.getItem('trip')) : null)
+    trip: null
   }
 
   componentDidMount() {
@@ -28,8 +29,8 @@ class Itinerary extends React.Component {
   }
   
   render() {
-    let trip = this.state.trip
-    if (trip) {
+    if (this.state.trip) {
+      let trip = this.state.trip
       return (
         <div className="itinerary">
             <div className="itinerary-title"><div>Trip to {trip.destination_city_name}</div> <button onClick={() => window.location='/trips'}>View All Trips</button></div>
@@ -84,7 +85,7 @@ class Itinerary extends React.Component {
       )
     } else {
       return(
-        <div>loading....</div>
+        <Loading />
       )
     }
   }
