@@ -8,7 +8,7 @@ function ManualSearch(props) {
       <form className="manual-search search" onSubmit={props.handleSubmit}>
         <div>I want a vaction for <input type="number" name="num_people" placeholder="2" /> people
         </div>
-        <div>for under $<input type="number" name="budget" placeholder="1200" />
+        <div>for under $<input type="number" name="budget" placeholder="800" />
         </div>
         <div>from <input type="date" name="start_date" /> to <input type="date" name="end_date" />
         </div>

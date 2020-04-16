@@ -328,7 +328,7 @@ div.inactive-trip {
 }
 
 div.active-trip {
-  background-color: green;
+  background-color: #478CC1;
   color: black;
   padding-left: 3px;
 }

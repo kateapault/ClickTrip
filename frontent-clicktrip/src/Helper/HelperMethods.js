@@ -56,3 +56,8 @@ export function setEdit(edit) {
 export function editBool() {
     return !!parseInt(getEdit())
 }
+
+export function getTime(timestr) {
+    let time = timestr.split('T')
+    return time.slice(0,5)
+}

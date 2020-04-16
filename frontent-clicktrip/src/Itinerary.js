@@ -2,7 +2,7 @@ import React from 'react';
 import FlightItem from './FlightItem'
 import HotelItem from './HotelItem'
 import ActivityItem from './ActivityItem'
-import { editBool, getEdit } from './Helper/HelperMethods'
+import { editBool, getEdit, getJSON } from './Helper/HelperMethods'
 import Loading from './Loading'
 
 class Itinerary extends React.Component {
@@ -12,20 +12,20 @@ class Itinerary extends React.Component {
 
   componentDidMount() {
     let tripID = window.sessionStorage.getItem('tripID')
-    // if (this.state.trip && this.state.trip.id == tripID) {
-    //   console.log("TRIP IS FINE. TRIP:")
-    //   console.log(this.state.trip)
-    //   return
-    // } else {
+    if (editBool(getEdit())) {
+      console.log("TRIP IS FINE. TRIP:")
+      console.log(this.state.trip)
+      this.setState({trip:getJSON('trip')})
+    } else {
       fetch(`http://localhost:3000/trips/${tripID}`)
       .then(resp => resp.json())
       .then(trip => {
         window.sessionStorage.setItem('trip',JSON.stringify(trip))
         this.setState({ trip: trip })
-        console.log("HEY HAD TO REPLACE TRIP:")
+        console.log("HEY FETCHED TRIP:")
         console.log(trip)
       })
-    // }
+    }
   }
   
   render() {
@@ -34,7 +34,7 @@ class Itinerary extends React.Component {
       return (
         <div className="itinerary">
             <div className="itinerary-title"><div>Trip to {trip.destination_city_name}</div> <button onClick={() => window.location='/trips'}>View All Trips</button></div>
-            {(this.props.edit || editBool()) ? 
+            {(this.state.edit || editBool()) ? 
               <button onClick={this.props.toggleEdit}>Save Changes To Trip</button>
             : <div className="itinerary-buttons">
                 <button onClick={this.props.toggleEdit}>Edit Trip</button>

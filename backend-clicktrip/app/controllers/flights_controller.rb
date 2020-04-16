@@ -40,7 +40,7 @@ class FlightsController < ApplicationController
             airline: 'AA',
             flight_number: '773',
             stops: '0',
-            price: '254.32'},
+            price: '154.32'},
 
             b:{departure_airport: 'NYC',
             departure_date: '2020-05-01',
@@ -84,10 +84,10 @@ class FlightsController < ApplicationController
             airline: 'AA',
             flight_number: '290',
             stops: '0',
-            price: '239.44'},
+            price: '189.44'},
 
             f:{departure_airport: 'DUB',
-            departure_date: '2020-05-10',
+            departure_date: '2020-05-04',
             departure_time: '09:04',
             arrival_airport: 'NYC',
             arrival_date:'2020-05-10',
@@ -106,7 +106,7 @@ class FlightsController < ApplicationController
             airline: 'DLT',
             flight_number: '1881',
             stops: '1',
-            price: '234.96'},
+            price: '106.55'},
 
             h:{departure_airport: 'NYC',
             departure_date: '2020-05-01',
@@ -117,7 +117,7 @@ class FlightsController < ApplicationController
             airline: 'UTD',
             flight_number: '980',
             stops: '1',
-            price: '106.55'},
+            price: '234.62'},
         }
 
         render json: flights
