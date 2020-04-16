@@ -128,7 +128,29 @@ class FlightsController < ApplicationController
     ### EXTERNAL DATA ################################################################
     ##################################################################################
 
-    def searchprice
+    def get_sky_city
+        city = params[:city]
+        country = params[:country]
+        require 'uri'
+        require 'net/http'
+        require 'openssl'
+        
+        url = URI("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/USA/USD/en-US/?query=#{city}%20#{country}")
+        
+        http = Net::HTTP.new(url.host, url.port)
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        
+        request = Net::HTTP::Get.new(url)
+        request["x-rapidapi-host"] = 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com'
+        request["x-rapidapi-key"] = '5524d16cc4mshc2e4a73acd97371p10fba3jsnd0c3d89e3170'
+        
+        response = http.request(request)
+        puts response.read_body
+        render json: response.read_body
+    end
+
+    def search_price
         origin = 'NYC'
         price = 700
         start_date = '2020-05-01'   # YYYY-MM-DD
@@ -144,11 +166,14 @@ class FlightsController < ApplicationController
 
     end
 
-    def searchdest
-        origin = 'NYC'
-        destination = 'DUB'
-        response = HTTParty.get("http://api.travelpayouts.com/v1/prices/cheap?origin=#{origin}&destination=#{destination}&currency=usd&token=#{ENV['TRAVELPAYOUTS_KEY']}")
+    def search_destination
+        origin = 'NYCA-sky'
+        destination = params[:destination]
+        
 
+        response = HTTParty.get("http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=#{origin}&destination=#{destination}&token=#{ENV['TRAVELPAYOUTS_KEY']}")
+        # response = HTTParty.get("http://api.travelpayouts.com/v1/prices/cheap?origin=#{origin}&destination=#{destination}&currency=usd&token=#{ENV['TRAVELPAYOUTS_KEY']}")
+        puts response.body
         render json: response.body
     end
 

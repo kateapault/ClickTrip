@@ -73,6 +73,42 @@ class ViewContainer extends React.Component {
         handleAutoSearchSubmit(userID,data)
     }
 
+    handleDestinationSearchSubmit = (e) => {
+        e.preventDefault()
+        this.setState({
+            edit:false,
+        })
+        let data = getFormData()
+        let userID = window.sessionStorage.getItem('userID')
+        data.user_id = userID
+        fetch(`${BASEURL}/get-sky-city`,{
+            method: "POST",
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                city: data.destination_city,
+                country: data.destination_country
+            })
+        })
+        .then(resp => resp.json())
+        .then(response => {
+            console.log(response)
+            window.sessionStorage.setItem('destCode',response.Places[0].PlaceId)
+            data.destination = response.Places[0].PlacesId
+        })
+        // .then(resp => {
+            // fetch(`${BASEURL}/search-flights-destination`,{
+            //     method: "POST",
+            //     headers: { 'Content-type': 'application/json' },
+            //     body: JSON.stringify(data.destination)
+            // })
+            // .then(resp => resp.json())
+            // .then(monthArray => {
+            //     console.log(monthArray)
+            //     window.sessionStorage.setItem('monthArray',JSON.parse(monthArray))
+            // })
+        // })
+    }
+
     handleFlightSubmit = (e) => {
         e.preventDefault()
         let flight = getCheckedRadioValue()
@@ -230,7 +266,7 @@ class ViewContainer extends React.Component {
                     <Route exact path='/destination-search'>
                         <div className="destination-search-view view">
                             <DestinationSearch 
-                                handleSubmit={this.handleSearchSubmit} 
+                                handleSubmit={this.handleDestinationSearchSubmit} 
                                 cycleBackground={this.cycleSearchBackground}
                             />
                         </div>

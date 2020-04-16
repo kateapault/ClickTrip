@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   post '/search-dummy-hotels', to: 'hotels#dummysearch'
   post '/search-dummy-activities', to: 'activities#dummysearch'
 
-  post '/search-flights-price', to: 'flights#searchprice'
-  post '/search-flights-dest', to: 'flights#searchdest'
+  post '/get-sky-city', to: 'flights#get_sky_city'
+  post '/search-flights-price', to: 'flights#search_price'
+  post '/search-flights-destination', to: 'flights#search_destination'
   get '/flight-results', to: 'flights#results'
   get '/users/:user_id/trips', to: 'users#my_trips'
 
